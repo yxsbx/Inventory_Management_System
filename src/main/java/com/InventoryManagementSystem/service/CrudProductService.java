@@ -4,13 +4,11 @@ import com.InventoryManagementSystem.dto.ProductDTO;
 import com.InventoryManagementSystem.model.Product;
 import com.InventoryManagementSystem.model.enums.ProductCategory;
 import com.InventoryManagementSystem.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -62,15 +60,16 @@ public class CrudProductService {
   }
 
   public void saveProductFromCsv(File csvFilePath) {
-       try (Stream<String> lines = Files.lines(csvFilePath.toPath())) {
-        List<Product> products = lines
-                .skip(1)
-                .map(this::stringToObject)
-                .toList();
-        productRepository.saveAll(products);
-      } catch (IOException e) {
-         e.printStackTrace();
-      }
+    try (Stream<String> lines = Files.lines(csvFilePath.toPath())) {
+      List<Product> products = lines
+              .skip(1)
+              .map(this::stringToObject)
+              .toList();
+      System.err.println("leu falta salva");
+      productRepository.saveAll(products);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   private Product stringToObject(String s) {
