@@ -5,27 +5,37 @@ import com.InventoryManagementSystem.model.enums.ProductCategory;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Table(name = "product")
 @Entity(name = "product")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(of = "id")
+@EqualsAndHashCode()
 public class Product {
     @Id
-    private String id;
-
-    private String name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long productCode;
     private ProductCategory category;
-    private Integer quantityInStock;
+    private String subcategory;
+    private String name;
+    private Integer stockQuantity;
     private Integer priceInCents;
+    private String sizeOrLot;
+    private String expiryDate;
 
     public Product(ProductDTO product) {
-        this.id = product.id();
-        this.name = product.name();
-        this.category = product.category();
-        this.quantityInStock = product.quantityInStock();
-        this.priceInCents = product.priceInCents();
+        this(
+                product.productCode(),
+                product.category(),
+                product.subcategory(),
+                product.name(),
+                product.stockQuantity(),
+                product.priceInCents(),
+                product.sizeOrLot(),
+                product.expiryDate()
+        );
     }
 }

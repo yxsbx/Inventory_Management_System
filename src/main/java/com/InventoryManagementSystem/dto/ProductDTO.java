@@ -2,23 +2,33 @@ package com.InventoryManagementSystem.dto;
 
 import com.InventoryManagementSystem.model.Product;
 import com.InventoryManagementSystem.model.enums.ProductCategory;
-import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDate;
+import java.util.List;
 
 public record ProductDTO(
-        String id,
-        String name,
+        Long productCode,
         ProductCategory category,
-        Integer quantityInStock,
+        String subcategory,
+        String name,
+        Integer stockQuantity,
+        Integer priceInCents,
+        String sizeOrLot,
+        String expiryDate
+        ) {
 
-        Integer priceInCents) {
 
-    public ProductDTO (Product product){
+    public ProductDTO(Product product){
         this(
-                product.getId(),
-                product.getName(),
+                product.getProductCode(),
                 product.getCategory(),
-                product.getQuantityInStock(),
-                product.getPriceInCents()
+                product.getSubcategory(),
+                product.getName(),
+                product.getStockQuantity(),
+                product.getPriceInCents(),
+                product.getSizeOrLot(),
+                product.getExpiryDate()
         );
     }
+
 }

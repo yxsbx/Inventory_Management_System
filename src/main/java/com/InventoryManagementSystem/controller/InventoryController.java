@@ -1,63 +1,77 @@
 package com.InventoryManagementSystem.controller;
 
 import com.InventoryManagementSystem.dto.ProductDTO;
-import com.InventoryManagementSystem.model.Product;
-import com.InventoryManagementSystem.repository.IProductRepository;
-import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
+import com.InventoryManagementSystem.model.enums.ProductCategory;
+import com.InventoryManagementSystem.service.CrudProductService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/product")
 public class InventoryController {
 
-    @Autowired
-    private IProductRepository productRepository;
+  private final CrudProductService productService;
 
-    @GetMapping
-    public ResponseEntity getAllProducts() {
-        var allProducts = productRepository.findAll();
-        return ResponseEntity.ok(allProducts);
+  public InventoryController(CrudProductService productService) {
+    this.productService = productService;
+  }
+
+  @GetMapping("/all")
+  public ResponseEntity<List<ProductDTO>> getAllProducts() {
+    List<ProductDTO> allProducts = productService.getAllProducts();
+    return ResponseEntity.ok(allProducts);
+  }
+  @GetMapping("/id/{id}")
+  public ResponseEntity<ProductDTO> getProductById(@PathVariable Long id) {
+    ProductDTO product = productService.getProductById(id);
+    return ResponseEntity.ok(product);
+  }
+  @GetMapping("/name/{name}")
+  public ResponseEntity<List<ProductDTO>> getProductByName(@PathVariable String name) {
+    List<ProductDTO> product = productService.getProductByName(name);
+    return ResponseEntity.ok(product);
+  }
+  @GetMapping("/category/{category}")
+  public ResponseEntity<List<ProductDTO>> getProductByCategory(@PathVariable ProductCategory category) {
+    List<ProductDTO> product = productService.getProductByCategory(category);
+    return ResponseEntity.ok(product);
+  }
+
+  @PostMapping
+  public ResponseEntity<Void> createProduct(@Valid @RequestBody ProductDTO data) {
+    productService.addProduct(data);
+    return ResponseEntity.ok().build();
+  }
+
+  @PutMapping
+  public ResponseEntity<ProductDTO> updateProduct(@Valid @RequestBody ProductDTO updatedProduct) {
+    return ResponseEntity.ok(productService.updateProduct(updatedProduct));
+  }
+
+  @DeleteMapping( "/{id}")
+  public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
+    productService.deleteProductId(id);
+    return ResponseEntity.noContent().build();
+  }
+
+  @DeleteMapping( "/all")
+  public ResponseEntity<Void> deleteProduct() {
+    productService.deleteAllBD();
+    return ResponseEntity.noContent().build();
+  }
+  @GetMapping("/csv")
+  public ResponseEntity<Void> saveProductFromCsv(){
+    File csvFilePath = new File("src/data/stock_data.csv");
+    try {
+      productService.saveProductFromCsv(csvFilePath);
+    }catch (Exception e){
+      e.printStackTrace();;//TODO: Não esquecer de arrumar
     }
-
-    @PostMapping
-    public ResponseEntity createProduct(@Valid @RequestBody ProductDTO data) {
-        productRepository.save(new Product(data));
-        return ResponseEntity.ok().build();
-    }
-
-
-    @PutMapping(path = "/{id}")
-    @Transactional
-    public ResponseEntity updateProduct(@PathVariable String id, @Valid @RequestBody ProductDTO data) {
-        Optional<Product> productToBeUpdated = productRepository.findById(id);
-        if (productToBeUpdated.isEmpty()) {
-            throw new EntityNotFoundException("Product with id " + id + " not found");
-        }
-        productToBeUpdated.get().setName(data.name());
-        productToBeUpdated.get().setCategory(data.category());
-        productToBeUpdated.get().setQuantityInStock(data.quantityInStock());
-        productToBeUpdated.get().setPriceInCents(data.priceInCents());
-
-        return ResponseEntity.ok(new ProductDTO(productToBeUpdated.get()));
-    }
-
-    @DeleteMapping(path = "/{id}")
-    @Transactional
-    public ResponseEntity deleteProduct(@PathVariable String id) {
-        Optional<Product> productToBeDeleted = productRepository.findById(id);
-        if (productToBeDeleted.isEmpty()) {
-            throw new EntityNotFoundException("Product with id " + id + " not found");
-        }
-        return ResponseEntity.noContent().build();
-    }
-
-
-
+    return ResponseEntity.ok().build();
+  }
 }
