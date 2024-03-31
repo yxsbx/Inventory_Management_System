@@ -6,11 +6,13 @@ import com.InventoryManagementSystem.model.enums.ProductCategory;
 import com.InventoryManagementSystem.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 @Service
 public class CrudProductService {
@@ -59,16 +61,17 @@ public class CrudProductService {
     productRepository.deleteAll();
   }
 
-  public void saveProductFromCsv(File csvFilePath) {
-    try (Stream<String> lines = Files.lines(csvFilePath.toPath())) {
-      List<Product> products = lines
-              .skip(1)
+  public String saveProductFromCsv(Path csvFilePath) {
+    try (BufferedReader reader = Files.newBufferedReader(csvFilePath)) {
+      List<Product> products = reader.lines()
+              .skip(1) // Pula o cabeçalho
               .map(this::stringToObject)
-              .toList();
-      System.err.println("leu falta salva");
+              .collect(Collectors.toList());
+
       productRepository.saveAll(products);
+      return "Produtos importados com sucesso!";
     } catch (IOException e) {
-      e.printStackTrace();
+      return "Erro ao importar os produtos: " + e.getMessage();
     }
   }
 
@@ -82,7 +85,7 @@ public class CrudProductService {
             Integer.parseInt(parts[4].trim()), // stockQuantity
             Integer.parseInt(parts[5].trim()), // priceInCents
             parts[6].trim(), // sizeOrLot
-            parts[7].trim() // expiryDate
+            LocalDate.parse(parts[7].trim()) // expiryDate
     );
   }
 }

@@ -3,6 +3,8 @@ package com.InventoryManagementSystem.dto;
 import com.InventoryManagementSystem.model.Product;
 import com.InventoryManagementSystem.model.enums.ProductCategory;
 
+import java.time.LocalDate;
+
 public record ProductDTO(
         Long productCode,
         ProductCategory category,
@@ -11,7 +13,7 @@ public record ProductDTO(
         Integer stockQuantity,
         Integer priceInCents,
         String sizeOrLot,
-        String expiryDate
+        LocalDate expiryDate
 ) {
 
 

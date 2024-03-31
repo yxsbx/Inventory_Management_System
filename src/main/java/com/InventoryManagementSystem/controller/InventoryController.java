@@ -4,6 +4,7 @@ import com.InventoryManagementSystem.dto.ProductDTO;
 import com.InventoryManagementSystem.model.enums.ProductCategory;
 import com.InventoryManagementSystem.service.CrudProductService;
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -68,14 +69,14 @@ public class InventoryController {
   }
 
   @GetMapping("/csv")
-  public ResponseEntity<Void> saveProductFromCsv() {
+  public ResponseEntity<String> saveProductFromCsv() {
     File csvFilePath = new File("src/data/stock_data.csv");
+    String message = "";
     try {
-      productService.saveProductFromCsv(csvFilePath);
+      message = productService.saveProductFromCsv(csvFilePath.toPath());
+      return ResponseEntity.ok(message);
     } catch (Exception e) {
-      e.printStackTrace();
-      ;//TODO: Não esquecer de arrumar
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(message + e.getMessage());
     }
-    return ResponseEntity.ok().build();
   }
 }

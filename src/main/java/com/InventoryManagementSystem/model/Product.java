@@ -5,6 +5,8 @@ import com.InventoryManagementSystem.model.enums.ProductCategory;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Table(name = "product")
 @Entity(name = "product")
 @Getter
@@ -22,7 +24,7 @@ public class Product {
   private Integer stockQuantity;
   private Integer priceInCents;
   private String sizeOrLot;
-  private String expiryDate;
+  private LocalDate expiryDate;
 
   public Product(ProductDTO product) {
     this(
