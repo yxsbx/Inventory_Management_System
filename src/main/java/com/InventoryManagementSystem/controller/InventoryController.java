@@ -57,13 +57,13 @@ public class InventoryController {
   }
 
   @DeleteMapping("/{id}")
-  public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
+  public ResponseEntity<Void> deleteAllProduct(@PathVariable Long id) {
     productService.deleteProductId(id);
     return ResponseEntity.noContent().build();
   }
 
   @DeleteMapping("/all")
-  public ResponseEntity<Void> deleteProduct() {
+  public ResponseEntity<Void> deleteAllProduct() {
     productService.deleteAllBD();
     return ResponseEntity.noContent().build();
   }

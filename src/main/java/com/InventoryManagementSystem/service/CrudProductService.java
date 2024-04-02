@@ -78,7 +78,7 @@ public class CrudProductService {
   private Product stringToObject(String s) {
     String[] parts = s.split(",");
     return new Product(
-            Long.parseLong(parts[0]), // productCode
+            Integer.parseInt(parts[0]), // productCode
             ProductCategory.valueOf(parts[1].trim().toUpperCase()), // category
             parts[2].trim(), // subcategory
             parts[3].trim(), // name

@@ -6,7 +6,7 @@ import com.InventoryManagementSystem.model.enums.ProductCategory;
 import java.time.LocalDate;
 
 public record ProductDTO(
-        Long productCode,
+        Integer productCode,
         ProductCategory category,
         String subcategory,
         String name,
