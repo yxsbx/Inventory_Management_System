@@ -32,6 +32,9 @@ public class CrudProductService {
   }
 
   public ProductDTO updateProduct(ProductDTO product) {
+    if (!productRepository.existsById(product.productCode())) {
+      throw new ProductIdNotFoundException(String.valueOf(product.productCode()));
+    }
     return new ProductDTO(productRepository.save(new Product(product)));
   }
 
@@ -42,8 +45,10 @@ public class CrudProductService {
     productRepository.delete(product);
   }
 
-  public ProductDTO getProductById(Long id) {
-    return new ProductDTO(productRepository.findById(id).get());
+  public ProductDTO getProductById(Integer id) {
+    Product product = productRepository.findById(id)
+            .orElseThrow(() -> new ProductIdNotFoundException(String.valueOf(id)));
+    return new ProductDTO(product);
   }
 
   public List<ProductDTO> getProductByName(String name) {
@@ -67,7 +72,7 @@ public class CrudProductService {
   public String saveProductFromCsv(Path csvFilePath) throws IOException {
     try (BufferedReader reader = Files.newBufferedReader(csvFilePath)) {
       List<Product> products = reader.lines()
-              .skip(1) // Pula o cabeçalho
+              .skip(1)
               .map(this::stringToObject)
               .collect(Collectors.toList());
 
