@@ -3,7 +3,9 @@ package com.InventoryManagementSystem.service;
 import com.InventoryManagementSystem.dto.ProductDTO;
 import com.InventoryManagementSystem.model.Product;
 import com.InventoryManagementSystem.model.enums.ProductCategory;
+import com.InventoryManagementSystem.model.exceptions.ProductIdNotFoundException;
 import com.InventoryManagementSystem.repository.ProductRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
@@ -15,15 +17,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class CrudProductService {
+
   private final ProductRepository productRepository;
 
-  public CrudProductService(ProductRepository productRepository) {
-    this.productRepository = productRepository;
-  }
-
-  public void addProduct(ProductDTO product) {
+  public Integer addProduct(ProductDTO product) {
     productRepository.save(new Product(product));
+    return product.productCode();
   }
 
   public List<ProductDTO> getAllProducts() {
@@ -34,8 +35,10 @@ public class CrudProductService {
     return new ProductDTO(productRepository.save(new Product(product)));
   }
 
-  public void deleteProductId(Long id) {
-    Product product = productRepository.findById(id).get();
+  public void deleteProductId(Integer id) {
+    Product product = productRepository.findById(id).orElseThrow(
+            () -> new ProductIdNotFoundException(String.valueOf(id))
+    );
     productRepository.delete(product);
   }
 
@@ -46,22 +49,22 @@ public class CrudProductService {
   public List<ProductDTO> getProductByName(String name) {
     return productRepository.findAll()
             .stream()
-            .filter(product -> product.getSubcategory().equals(name))
+            .filter(product -> product.getName().toLowerCase().contains(name.toLowerCase()))
             .map(ProductDTO::new).toList();
   }
 
-  public List<ProductDTO> getProductByCategory(ProductCategory category) {
+  public List<ProductDTO> getProductByCategory(String category) {
     return productRepository.findAll()
             .stream()
-            .filter(product -> product.getCategory().equals(category))
-            .map(ProductDTO::new).toList();
+            .filter(product -> String.valueOf(product.getCategory()).contains((category.toUpperCase())))
+                    .map(ProductDTO::new).toList();
   }
 
   public void deleteAllBD() {
     productRepository.deleteAll();
   }
 
-  public String saveProductFromCsv(Path csvFilePath) {
+  public String saveProductFromCsv(Path csvFilePath) throws IOException {
     try (BufferedReader reader = Files.newBufferedReader(csvFilePath)) {
       List<Product> products = reader.lines()
               .skip(1) // Pula o cabeçalho
@@ -70,8 +73,6 @@ public class CrudProductService {
 
       productRepository.saveAll(products);
       return "Produtos importados com sucesso!";
-    } catch (IOException e) {
-      return "Erro ao importar os produtos: " + e.getMessage();
     }
   }
 
