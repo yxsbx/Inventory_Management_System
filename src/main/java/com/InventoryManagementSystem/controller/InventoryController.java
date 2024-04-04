@@ -72,7 +72,7 @@ public class InventoryController {
 
   @GetMapping("/csv")
   public ResponseEntity<String> saveProductFromCsv() throws IOException {
-    String message = productService.saveProductFromCsv(FILE_PATH.toPath());
+    String message = productService.readProductsFromCsv(FILE_PATH.toPath());
     return ResponseEntity.ok(message);
   }
 }

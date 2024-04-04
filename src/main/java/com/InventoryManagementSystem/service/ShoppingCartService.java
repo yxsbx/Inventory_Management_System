@@ -2,6 +2,8 @@ package com.InventoryManagementSystem.service;
 
 import com.InventoryManagementSystem.dto.ProductDTO;
 import com.InventoryManagementSystem.model.Product;
+import com.InventoryManagementSystem.model.exceptions.ProductIdNotFoundException;
+import com.InventoryManagementSystem.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,31 +15,28 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class ShoppingCartService {
 
-  private final List<ProductDTO> shoppingCart = new ArrayList<>();
+  private final List<Product> shoppingCart = new ArrayList<>();
+  private ProductRepository productRepository;
 
-  public void addToCart(Product product, int stockQuantity) {
-    if (stockQuantity <= 0) {
+  public synchronized void addToCart(ProductDTO product, int stockQuantity) {
+    Product item = productRepository.findById(product.productCode()).orElseThrow(
+            () -> new ProductIdNotFoundException("Item not found.")
+    );
+
+    if (stockQuantity < 0 && item.getStockQuantity() < 0) {
       throw new IllegalArgumentException("Stock quantity must be positive.");
     }
 
-    Optional<ProductDTO> existingProduct = shoppingCart.stream()
-            .filter(item -> item.productCode().equals(product.getProductCode()))
-            .findFirst();
-
-    if (existingProduct.isPresent()) {
-      ProductDTO existingItem = existingProduct.get();
-      ProductDTO updatedItem = existingItem.setStockQuantity(existingItem.stockQuantity() + stockQuantity);
-      shoppingCart.remove(existingItem);
-      shoppingCart.add(updatedItem);
+    if (isProductInCart(item.getProductCode())) {
+      Product itemInCart = getProductInCart(item.getProductCode());
+      itemInCart.setStockQuantity(itemInCart.getStockQuantity() + stockQuantity);
     } else {
-      ProductDTO newItem = new ProductDTO(product);
-      newItem = newItem.setStockQuantity(stockQuantity);
-      shoppingCart.add(newItem);
+      shoppingCart.add(item);
     }
   }
 
   public void removeFromCart(Integer productCode) {
-    shoppingCart.removeIf(item -> item.productCode().equals(productCode));
+    shoppingCart.removeIf(item -> item.getProductCode().equals(productCode));
   }
 
   public void clearCart() {
@@ -47,14 +46,22 @@ public class ShoppingCartService {
   public String checkout() {
     StringBuilder sb = new StringBuilder();
     sb.append("Items in your cart:\n");
-    for (ProductDTO item : shoppingCart) {
-      sb.append(item.name()).append(" - Quantity: ").append(item.stockQuantity()).append("\n");
+    for (Product item : shoppingCart) {
+      sb.append(item.getName()).append(" - Quantity: ").append(item.getStockQuantity()).append("\n");
     }
     sb.append("Checkout successful");
     return sb.toString();
   }
 
-  public List<ProductDTO> getShoppingCart() {
-    return new ArrayList<>(shoppingCart);
+  public List<ProductDTO> getShoppingCart(){
+    return shoppingCart.stream().map(ProductDTO::new).toList();
+  }
+
+  private boolean isProductInCart(Integer productCode) {
+    return shoppingCart.stream().anyMatch(item -> item.getProductCode().equals(productCode));
+  }
+
+  private Product getProductInCart(Integer productCode) {
+    return shoppingCart.stream().filter(item -> item.getProductCode().equals(productCode)).findFirst().get();
   }
 }

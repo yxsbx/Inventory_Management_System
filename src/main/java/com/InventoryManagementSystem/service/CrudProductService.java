@@ -69,7 +69,7 @@ public class CrudProductService {
     productRepository.deleteAll();
   }
 
-  public String saveProductFromCsv(Path csvFilePath) throws IOException {
+  public String readProductsFromCsv(Path csvFilePath) throws IOException {
     try (BufferedReader reader = Files.newBufferedReader(csvFilePath)) {
       List<Product> products = reader.lines()
               .skip(1)
