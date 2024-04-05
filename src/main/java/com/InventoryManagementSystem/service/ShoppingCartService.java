@@ -7,6 +7,7 @@ import com.InventoryManagementSystem.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -64,4 +65,21 @@ public class ShoppingCartService {
   private Product getProductInCart(Integer productCode) {
     return shoppingCart.stream().filter(item -> item.getProductCode().equals(productCode)).findFirst().get();
   }
+
+  public List<ProductDTO> getNearExpiryProducts() {
+    return shoppingCart
+            .stream()
+            .filter(item -> item.getExpiryDate().isBefore(LocalDate.now().plusDays(7)))
+            .map(ProductDTO::new)
+            .toList();
+  }
+
+  public List<ProductDTO> getExpiredProducts() {
+    return shoppingCart
+            .stream()
+            .filter(item -> item.getExpiryDate().isBefore(LocalDate.now()))
+            .map(ProductDTO::new)
+            .toList();
+  }
+  
 }
