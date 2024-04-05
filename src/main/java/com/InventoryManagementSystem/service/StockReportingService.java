@@ -19,10 +19,10 @@ public class StockReportingService {
   private final ProductRepository productRepository;
 
   public void writeStockReportFile() throws IOException {
-     String reportDestinationPath = "src/data/";
+     String reportDestinationPath = "src/data/reports";
 
     // Verificar e criar o diretório reports se não existir
-    Path reportsDirectory = Paths.get(reportDestinationPath).getParent();
+    Path reportsDirectory = Paths.get(reportDestinationPath);
     if (!Files.exists(reportsDirectory)) {
       Files.createDirectories(reportsDirectory);
     }
