@@ -18,8 +18,8 @@ public class GlobalExceptionHandler {
     return ResponseEntity.notFound().eTag("Error when importing products from file: " + e.getMessage()).build();
   }
 
-  @ExceptionHandler(Exception.class)
-  public ResponseEntity<?> handleException(Exception e) {
-    return ResponseEntity.status(503).eTag("something wrong happened..." + e.getMessage()).build();
-  }
+//  @ExceptionHandler(Exception.class)
+//  public ResponseEntity<?> handleException(Exception e) {
+//    return ResponseEntity.status(503).eTag("something wrong happened..." + e.getMessage()).build();
+//  }
 }

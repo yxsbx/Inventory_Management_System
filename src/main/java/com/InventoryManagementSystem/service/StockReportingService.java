@@ -16,10 +16,11 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class StockReportingService {
-  private final String reportDestinationPath;
   private final ProductRepository productRepository;
 
-  public List<Product> writeStockReportFile() throws IOException {
+  public void writeStockReportFile() throws IOException {
+     String reportDestinationPath = "src/data/";
+
     // Verificar e criar o diretório reports se não existir
     Path reportsDirectory = Paths.get(reportDestinationPath).getParent();
     if (!Files.exists(reportsDirectory)) {
@@ -45,7 +46,7 @@ public class StockReportingService {
             StandardOpenOption.CREATE,
             StandardOpenOption.TRUNCATE_EXISTING);
 
-    return productRepository.findAll();
+    System.err.println("Relatório gerado com sucesso: " + reportFilePath);
   }
 
   protected String productToString(Product product) {
