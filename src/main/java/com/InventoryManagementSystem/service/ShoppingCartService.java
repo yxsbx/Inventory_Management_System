@@ -18,6 +18,7 @@ public class ShoppingCartService {
 
   private final List<Product> shoppingCart = new ArrayList<>();
   private ProductRepository productRepository;
+  private CrudProductService crudProductService;
 
   public synchronized void addToCart(ProductDTO product, int stockQuantity) {
     Product item = productRepository.findById(product.productCode()).orElseThrow(
@@ -66,20 +67,8 @@ public class ShoppingCartService {
     return shoppingCart.stream().filter(item -> item.getProductCode().equals(productCode)).findFirst().get();
   }
 
-  public List<ProductDTO> getNearExpiryProducts() {
-    return shoppingCart
-            .stream()
-            .filter(item -> item.getExpiryDate().isBefore(LocalDate.now().plusDays(7)))
-            .map(ProductDTO::new)
-            .toList();
-  }
 
-  public List<ProductDTO> getExpiredProducts() {
-    return shoppingCart
-            .stream()
-            .filter(item -> item.getExpiryDate().isBefore(LocalDate.now()))
-            .map(ProductDTO::new)
-            .toList();
-  }
+
+
   
 }

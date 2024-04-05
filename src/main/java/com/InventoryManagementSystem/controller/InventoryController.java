@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class InventoryController {
   private final File FILE_PATH = new File("src/data/stock_data.csv");
-  ;
+
 
   private final CrudProductService productService;
 
