@@ -16,7 +16,6 @@ import java.util.List;
 @RequestMapping("/product")
 @RequiredArgsConstructor
 public class InventoryController {
-
   private final File FILE_PATH = new File("src/data/stock_data.csv");
   ;
 
