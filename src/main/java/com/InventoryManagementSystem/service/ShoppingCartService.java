@@ -20,8 +20,8 @@ public class ShoppingCartService {
   private ProductRepository productRepository;
   private CrudProductService crudProductService;
 
-  public synchronized void addToCart(ProductDTO product, int stockQuantity) {
-    Product item = productRepository.findById(product.productCode()).orElseThrow(
+  public synchronized void addToCart(Integer productId, int stockQuantity) {
+    Product item = this.productRepository.findById(productId).orElseThrow(
             () -> new ProductIdNotFoundException("Item not found.")
     );
 
@@ -36,7 +36,6 @@ public class ShoppingCartService {
       shoppingCart.add(item);
     }
   }
-
   public void removeFromCart(Integer productCode) {
     shoppingCart.removeIf(item -> item.getProductCode().equals(productCode));
   }

@@ -45,33 +45,7 @@ public class StockProductVerifyService {
         }
     }
 
-    /**
-     * Apply a discount to the products in the shopping cart if the current time is within a specific interval.
-     *
-     * @param  days              the number of days to consider for near expiry products
-     * @param  discountPercentage the percentage of discount to apply
-     */
-    public void applyDiscountToCart(int days, int discountPercentage) {
 
-        LocalDateTime now = LocalDateTime.now();
-        LocalDateTime startInterval = LocalDateTime.of(now.getYear(), now.getMonth(), now.getDayOfMonth(), 0, 0);
-        LocalDateTime endInterval = LocalDateTime.of(now.getYear(), now.getMonth(), now.getDayOfMonth(), 0, 1);
-
-        if(now.isAfter(startInterval) && now.isBefore(endInterval)) {
-            List<ProductDTO> nearExpiryProductsFromCart = getNearExpiryProductsFromShoppingCart(days);
-
-            nearExpiryProductsFromCart.stream()
-                    .map(item -> {
-                        Product product = new Product(item);
-                        product.setPriceInCents(product.getPriceInCents() - (product.getPriceInCents() * discountPercentage / 100));
-                        return product;
-                    }).forEach(item -> {
-                        ProductDTO updatedProductDTO = new ProductDTO(item);
-                        crudProductService.updateProduct(updatedProductDTO);
-                    });
-        }
-
-    }
     private List<ProductDTO> getNearExpiryProductsFromShoppingCart(int days) {
         return shoppingCartService.getShoppingCart()
                 .stream()
