@@ -7,18 +7,16 @@ import com.InventoryManagementSystem.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class ShoppingCartService {
 
+  private final ProductRepository productRepository;
   private final List<Product> shoppingCart = new ArrayList<>();
-  private ProductRepository productRepository;
-  private CrudProductService crudProductService;
+
 
   public synchronized void addToCart(Integer productId, int stockQuantity) {
     Product item = this.productRepository.findById(productId).orElseThrow(
@@ -36,6 +34,7 @@ public class ShoppingCartService {
       shoppingCart.add(item);
     }
   }
+
   public void removeFromCart(Integer productCode) {
     shoppingCart.removeIf(item -> item.getProductCode().equals(productCode));
   }
@@ -54,7 +53,7 @@ public class ShoppingCartService {
     return sb.toString();
   }
 
-  public List<ProductDTO> getShoppingCart(){
+  public List<ProductDTO> getShoppingCart() {
     return shoppingCart.stream().map(ProductDTO::new).toList();
   }
 
@@ -67,7 +66,4 @@ public class ShoppingCartService {
   }
 
 
-
-
-  
 }
