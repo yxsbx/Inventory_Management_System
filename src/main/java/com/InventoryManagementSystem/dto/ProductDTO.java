@@ -13,7 +13,8 @@ public record ProductDTO(
         Integer stockQuantity,
         Integer priceInCents,
         String sizeOrLot,
-        LocalDate expiryDate
+        LocalDate expiryDate,
+        boolean activeDiscount
 ) {
 
 
@@ -26,20 +27,8 @@ public record ProductDTO(
             product.getStockQuantity(),
             product.getPriceInCents(),
             product.getSizeOrLot(),
-            product.getExpiryDate()
-    );
-  }
-
-  public ProductDTO setStockQuantity(int stockQuantity) {
-    return new ProductDTO(
-            this.productCode,
-            this.category,
-            this.subcategory,
-            this.name,
-            stockQuantity,
-            this.priceInCents,
-            this.sizeOrLot,
-            this.expiryDate
+            product.getExpiryDate(),
+            product.getActiveDiscount()
     );
   }
 }

@@ -25,6 +25,8 @@ public class Product {
   private Integer priceInCents;
   private String sizeOrLot;
   private LocalDate expiryDate;
+  @Column(name = "active_discount")
+  private Boolean activeDiscount;
 
   public Product(ProductDTO product) {
     this(
@@ -35,7 +37,8 @@ public class Product {
             product.stockQuantity(),
             product.priceInCents(),
             product.sizeOrLot(),
-            product.expiryDate()
+            product.expiryDate(),
+             false
     );
   }
 }

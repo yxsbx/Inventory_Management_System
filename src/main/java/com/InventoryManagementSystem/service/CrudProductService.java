@@ -91,7 +91,8 @@ public class CrudProductService {
             Integer.parseInt(parts[4].trim()), // stockQuantity
             Integer.parseInt(parts[5].trim()), // priceInCents
             parts[6].trim(), // sizeOrLot
-            LocalDate.parse(parts[7].trim()) // expiryDate
+            LocalDate.parse(parts[7].trim()), // expiryDate
+            false
     );
   }
 }
