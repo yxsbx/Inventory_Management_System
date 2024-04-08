@@ -1,52 +1,1001 @@
 productCode,category,subcategory,name,stockQuantity,priceInCents,sizeOrLot,expiryDate
-1000,ELECTRONICS,Camera,Camera 99,87,33088,null,2100-01-01
-1001,BOOKS,Educational,Educational 61,16,114956,null,2100-01-01
-1002,ELECTRONICS,Smartwatch,Smartwatch 4,24,10948,null,2100-01-01
-1003,BOOKS,Fantasy,Fantasy 55,77,264209,null,2100-01-01
-1004,FURNITURE,Bed,Bed 93,11,206498,null,2100-01-01
-1005,GROCERIES,Dairy,Cheese 35,76,260433,Batch584,2024-06-12
-1006,BOOKS,Fiction,Fiction 68,22,263156,null,2100-01-01
-1007,BOOKS,Educational,Educational 46,66,244219,null,2100-01-01
-1008,BOOKS,Fiction,Fiction 94,25,180077,null,2100-01-01
-1009,FURNITURE,Table,Table 58,29,423934,null,2100-01-01
-1010,FURNITURE,Bed,Bed 62,72,43175,null,2100-01-01
-1011,ELECTRONICS,Samsung,Smartphone 26,18,145547,null,2100-01-01
-1012,ELECTRONICS,Samsung,Smartphone 32,28,204079,null,2100-01-01
-1013,GROCERIES,Dairy,Coffee 65,66,261888,Batch124,2024-11-23
-1014,ELECTRONICS,Samsung,Smartphone 28,58,39316,null,2100-01-01
-1015,ELECTRONICS,Tablet,Tablet 60,25,450633,null,2100-01-01
-1016,GROCERIES,Dairy,Milk 43,64,391988,Batch395,2025-02-12
-1017,ELECTRONICS,Tablet,Tablet 42,99,56811,null,2100-01-01
-1018,FURNITURE,Chair,Chair 79,77,203787,null,2100-01-01
-1019,BOOKS,Educational,Educational 12,18,163479,null,2100-01-01
-1020,ELECTRONICS,Camera,Camera 85,85,223782,null,2100-01-01
-1021,FURNITURE,Bed,Bed 9,93,350369,null,2100-01-01
-1022,GROCERIES,Dairy,Milk 8,47,298022,Batch956,2024-09-21
-1023,FURNITURE,Chair,Chair 97,89,479105,null,2100-01-01
-1024,ELECTRONICS,Headphones,Headphones 95,21,132154,null,2100-01-01
-1025,GROCERIES,Dairy,Cheese 89,36,495349,Batch327,2025-03-17
-1026,BOOKS,Fiction,Fiction 92,45,289470,null,2100-01-01
-1027,FURNITURE,Table,Table 39,82,192418,null,2100-01-01
-1028,GROCERIES,Dairy,Cheese 42,80,347878,Batch622,2024-08-29
-1029,ELECTRONICS,Smartwatch,Smartwatch 83,68,396993,null,2100-01-01
-1030,FURNITURE,Bed,Bed 74,74,211584,null,2100-01-01
-1031,BOOKS,Fantasy,Fantasy 10,14,367666,null,2100-01-01
-1032,ELECTRONICS,Smartwatch,Smartwatch 3,59,197621,null,2100-01-01
-1033,GROCERIES,Dairy,Coffee 61,55,255259,Batch214,2025-01-08
-1034,FURNITURE,Chair,Chair 60,61,288517,null,2100-01-01
-1035,BOOKS,Educational,Educational 50,79,210590,null,2100-01-01
-1036,ELECTRONICS,Smartwatch,Smartwatch 22,14,279206,null,2100-01-01
-1037,GROCERIES,Dairy,Cheese 2,13,360446,Batch147,2024-11-07
-1038,FURNITURE,Table,Table 54,84,234257,null,2100-01-01
-1039,BOOKS,Fantasy,Fantasy 16,61,281408,null,2100-01-01
-1040,ELECTRONICS,Headphones,Headphones 18,73,267499,null,2100-01-01
-1041,GROCERIES,Dairy,Milk 69,42,496989,Batch490,2025-05-20
-1042,FURNITURE,Bed,Bed 8,11,486274,null,2100-01-01
-1043,BOOKS,Educational,Educational 51,58,459872,null,2100-01-01
-1044,ELECTRONICS,Smartwatch,Smartwatch 97,98,432140,null,2100-01-01
-1045,GROCERIES,Dairy,Coffee 96,39,368595,Batch800,2024-12-30
-1046,FURNITURE,Chair,Chair 34,97,427731,null,2100-01-01
-1047,BOOKS,Fiction,Fiction 71,43,486167,null,2100-01-01
-1048,ELECTRONICS,Smartwatch,Smartwatch 81,67,383082,null,2100-01-01
-1049,GROCERIES,Dairy,Milk 56,12,489709,Batch148,2024-11-07
-1050,FURNITURE,Table,Table 20,53,412018,null,2100-01-01
+1000,BOOKS,Non-fiction,"Guns, Germs, and Steel",29,68600,null,null
+1001,CLOTHING,Jeans,Levi's,22,182343,L,null
+1002,CLOTHING,T-shirt,Adidas,81,174049,M,null
+1003,ELECTRONICS,Smartphone,Samsung Galaxy S21,12,198478,null,null
+1004,CLOTHING,Jeans,Levi's,81,9256,M,null
+1005,CLOTHING,T-shirt,Nike,11,79852,M,null
+1006,GROCERIES,Fruits,Bananas,39,148844,3914g,2024-12-27
+1007,CLOTHING,Jeans,Wrangler,100,186293,L,null
+1008,ELECTRONICS,Laptop,Lenovo ThinkPad X1,82,117266,null,null
+1009,BOOKS,Non-fiction,Sapiens,22,48276,null,null
+1010,FURNITURE,Chair,Dining Chair,37,162380,null,null
+1011,CLOTHING,Jeans,Wrangler,73,59430,M,null
+1012,CLOTHING,Jeans,Lee,64,79304,M,null
+1013,GROCERIES,Dairy,Cheese,88,121644,3099g,2024-12-01
+1014,ELECTRONICS,Smartphone,iPhone 12,92,1810,null,null
+1015,FURNITURE,Table,Coffee Table,35,61595,null,null
+1016,BOOKS,Fiction,1984,59,106091,null,null
+1017,ELECTRONICS,Smartphone,Samsung Galaxy S21,25,15790,null,null
+1018,BOOKS,Non-fiction,The Sixth Extinction,53,9318,null,null
+1019,CLOTHING,Jeans,Levi's,19,135471,L,null
+1020,ELECTRONICS,Smartphone,Samsung Galaxy S21,25,120472,null,null
+1021,CLOTHING,T-shirt,Puma,74,66047,L,null
+1022,BOOKS,Non-fiction,"Guns, Germs, and Steel",38,186923,null,null
+1023,FURNITURE,Table,Coffee Table,71,82907,null,null
+1024,ELECTRONICS,Smartphone,Samsung Galaxy S21,92,21135,null,null
+1025,BOOKS,Fiction,1984,99,7640,null,null
+1026,GROCERIES,Fruits,Apples,35,167803,3484g,2025-03-11
+1027,FURNITURE,Chair,Lounge Chair,44,157932,null,null
+1028,ELECTRONICS,Laptop,MacBook Pro,38,192114,null,null
+1029,ELECTRONICS,Laptop,Lenovo ThinkPad X1,35,23717,null,null
+1030,FURNITURE,Chair,Dining Chair,29,68309,null,null
+1031,ELECTRONICS,Smartphone,Samsung Galaxy S21,37,106580,null,null
+1032,BOOKS,Fiction,1984,70,155484,null,null
+1033,ELECTRONICS,Laptop,Dell XPS 13,13,182309,null,null
+1034,BOOKS,Non-fiction,The Sixth Extinction,85,70745,null,null
+1035,BOOKS,Fiction,1984,19,133109,null,null
+1036,GROCERIES,Dairy,Milk,31,182583,1851g,2024-07-09
+1037,ELECTRONICS,Smartphone,iPhone 12,58,31526,null,null
+1038,CLOTHING,Jeans,Lee,51,89954,L,null
+1039,GROCERIES,Fruits,Bananas,36,125694,3469g,2025-02-27
+1040,FURNITURE,Table,Desk,31,179707,null,null
+1041,FURNITURE,Table,Dining Table,20,28036,null,null
+1042,FURNITURE,Table,Dining Table,93,12761,null,null
+1043,GROCERIES,Dairy,Milk,71,187139,4211g,2024-05-16
+1044,BOOKS,Fiction,1984,73,14269,null,null
+1045,BOOKS,Non-fiction,Sapiens,72,190038,null,null
+1046,CLOTHING,T-shirt,Puma,79,195107,S,null
+1047,GROCERIES,Dairy,Milk,65,122723,3216g,2024-12-11
+1048,CLOTHING,T-shirt,Adidas,31,128984,XL,null
+1049,FURNITURE,Chair,Dining Chair,45,141253,null,null
+1050,ELECTRONICS,Smartphone,iPhone 12,86,137389,null,null
+1051,ELECTRONICS,Smartphone,iPhone 12,95,170866,null,null
+1052,FURNITURE,Table,Dining Table,26,150536,null,null
+1053,GROCERIES,Fruits,Oranges,92,54310,1923g,2024-11-12
+1054,ELECTRONICS,Laptop,Lenovo ThinkPad X1,28,27842,null,null
+1055,GROCERIES,Fruits,Bananas,35,113634,1555g,2024-12-04
+1056,ELECTRONICS,Laptop,Dell XPS 13,66,66436,null,null
+1057,ELECTRONICS,Laptop,Dell XPS 13,83,12715,null,null
+1058,CLOTHING,T-shirt,Adidas,12,157665,S,null
+1059,FURNITURE,Table,Dining Table,64,155698,null,null
+1060,FURNITURE,Table,Coffee Table,44,86900,null,null
+1061,FURNITURE,Table,Coffee Table,48,129916,null,null
+1062,ELECTRONICS,Smartphone,iPhone 12,36,50128,null,null
+1063,BOOKS,Fiction,The Great Gatsby,77,72614,null,null
+1064,GROCERIES,Fruits,Bananas,68,164705,513g,2024-12-19
+1065,ELECTRONICS,Laptop,Dell XPS 13,19,191254,null,null
+1066,FURNITURE,Chair,Office Chair,36,29936,null,null
+1067,ELECTRONICS,Laptop,MacBook Pro,46,18417,null,null
+1068,BOOKS,Fiction,The Great Gatsby,44,190990,null,null
+1069,GROCERIES,Fruits,Bananas,76,142843,449g,2024-06-19
+1070,CLOTHING,T-shirt,Adidas,79,114850,S,null
+1071,FURNITURE,Table,Coffee Table,98,6300,null,null
+1072,FURNITURE,Chair,Office Chair,86,75651,null,null
+1073,GROCERIES,Fruits,Oranges,94,54612,4715g,2024-09-16
+1074,CLOTHING,T-shirt,Adidas,52,34306,L,null
+1075,BOOKS,Non-fiction,"Guns, Germs, and Steel",56,180954,null,null
+1076,FURNITURE,Table,Coffee Table,12,66711,null,null
+1077,FURNITURE,Chair,Office Chair,93,34961,null,null
+1078,CLOTHING,Jeans,Wrangler,23,188839,M,null
+1079,CLOTHING,T-shirt,Adidas,43,12506,S,null
+1080,BOOKS,Fiction,The Great Gatsby,35,157894,null,null
+1081,BOOKS,Non-fiction,Sapiens,97,102623,null,null
+1082,GROCERIES,Dairy,Milk,53,117341,3746g,2024-08-03
+1083,BOOKS,Non-fiction,The Sixth Extinction,59,86599,null,null
+1084,FURNITURE,Chair,Lounge Chair,83,109490,null,null
+1085,FURNITURE,Table,Dining Table,98,119722,null,null
+1086,BOOKS,Non-fiction,The Sixth Extinction,19,45860,null,null
+1087,CLOTHING,T-shirt,Nike,82,95533,M,null
+1088,CLOTHING,Jeans,Lee,100,75159,L,null
+1089,FURNITURE,Chair,Dining Chair,47,188808,null,null
+1090,GROCERIES,Dairy,Cheese,46,107596,1482g,2025-01-14
+1091,FURNITURE,Chair,Office Chair,80,135168,null,null
+1092,GROCERIES,Fruits,Apples,29,20169,3376g,2024-10-05
+1093,ELECTRONICS,Laptop,MacBook Pro,44,53352,null,null
+1094,ELECTRONICS,Laptop,MacBook Pro,80,123140,null,null
+1095,FURNITURE,Chair,Office Chair,56,6977,null,null
+1096,BOOKS,Fiction,To Kill a Mockingbird,72,119286,null,null
+1097,CLOTHING,T-shirt,Nike,54,96032,XL,null
+1098,CLOTHING,Jeans,Lee,21,93551,M,null
+1099,BOOKS,Non-fiction,Sapiens,72,171136,null,null
+1100,BOOKS,Non-fiction,Sapiens,35,134406,null,null
+1101,GROCERIES,Dairy,Milk,72,6481,4264g,2025-03-24
+1102,ELECTRONICS,Laptop,Dell XPS 13,25,194950,null,null
+1103,FURNITURE,Chair,Dining Chair,75,35495,null,null
+1104,BOOKS,Non-fiction,The Sixth Extinction,88,173493,null,null
+1105,ELECTRONICS,Laptop,Lenovo ThinkPad X1,55,111132,null,null
+1106,ELECTRONICS,Smartphone,Google Pixel 5,92,123014,null,null
+1107,ELECTRONICS,Laptop,MacBook Pro,17,133569,null,null
+1108,ELECTRONICS,Laptop,Dell XPS 13,60,118327,null,null
+1109,GROCERIES,Dairy,Cheese,70,110440,2221g,2024-11-23
+1110,BOOKS,Fiction,1984,59,55550,null,null
+1111,CLOTHING,T-shirt,Nike,17,135196,M,null
+1112,GROCERIES,Fruits,Oranges,95,8215,4539g,2024-11-24
+1113,ELECTRONICS,Smartphone,Google Pixel 5,41,55701,null,null
+1114,ELECTRONICS,Smartphone,iPhone 12,94,73973,null,null
+1115,BOOKS,Fiction,To Kill a Mockingbird,99,54952,null,null
+1116,CLOTHING,T-shirt,Adidas,42,51712,S,null
+1117,BOOKS,Non-fiction,"Guns, Germs, and Steel",51,171663,null,null
+1118,FURNITURE,Table,Desk,22,196566,null,null
+1119,ELECTRONICS,Smartphone,Samsung Galaxy S21,38,27898,null,null
+1120,CLOTHING,Jeans,Levi's,17,28267,L,null
+1121,GROCERIES,Fruits,Oranges,87,74985,3822g,2025-03-03
+1122,GROCERIES,Dairy,Cheese,48,129100,1498g,2025-02-01
+1123,FURNITURE,Chair,Office Chair,13,42881,null,null
+1124,GROCERIES,Dairy,Cheese,19,171182,3130g,2024-06-28
+1125,FURNITURE,Chair,Lounge Chair,46,190029,null,null
+1126,FURNITURE,Table,Dining Table,55,26818,null,null
+1127,FURNITURE,Table,Coffee Table,99,112621,null,null
+1128,FURNITURE,Chair,Lounge Chair,44,109447,null,null
+1129,GROCERIES,Fruits,Apples,25,181583,2836g,2024-10-05
+1130,ELECTRONICS,Laptop,Dell XPS 13,17,80713,null,null
+1131,GROCERIES,Dairy,Yogurt,99,96986,1001g,2024-11-01
+1132,CLOTHING,Jeans,Levi's,82,49646,XL,null
+1133,ELECTRONICS,Laptop,MacBook Pro,17,56649,null,null
+1134,CLOTHING,T-shirt,Nike,80,56997,L,null
+1135,BOOKS,Non-fiction,Sapiens,21,83928,null,null
+1136,BOOKS,Fiction,The Great Gatsby,17,31913,null,null
+1137,ELECTRONICS,Laptop,Lenovo ThinkPad X1,40,171929,null,null
+1138,CLOTHING,Jeans,Lee,69,79354,L,null
+1139,BOOKS,Fiction,To Kill a Mockingbird,99,20136,null,null
+1140,FURNITURE,Table,Coffee Table,62,63367,null,null
+1141,CLOTHING,Jeans,Levi's,86,11925,L,null
+1142,BOOKS,Non-fiction,"Guns, Germs, and Steel",11,64576,null,null
+1143,CLOTHING,T-shirt,Adidas,32,52601,S,null
+1144,BOOKS,Fiction,The Great Gatsby,77,157921,null,null
+1145,FURNITURE,Table,Desk,26,140968,null,null
+1146,ELECTRONICS,Smartphone,Google Pixel 5,63,105877,null,null
+1147,ELECTRONICS,Laptop,Lenovo ThinkPad X1,78,107466,null,null
+1148,BOOKS,Fiction,To Kill a Mockingbird,97,19409,null,null
+1149,GROCERIES,Dairy,Cheese,43,84799,4260g,2024-10-10
+1150,GROCERIES,Fruits,Bananas,48,61969,3732g,2024-12-23
+1151,FURNITURE,Table,Coffee Table,12,16649,null,null
+1152,FURNITURE,Chair,Office Chair,78,79677,null,null
+1153,GROCERIES,Dairy,Yogurt,78,85156,4631g,2024-08-19
+1154,ELECTRONICS,Smartphone,iPhone 12,72,27406,null,null
+1155,CLOTHING,Jeans,Lee,87,48575,M,null
+1156,CLOTHING,Jeans,Lee,80,12059,S,null
+1157,FURNITURE,Table,Dining Table,37,76052,null,null
+1158,CLOTHING,Jeans,Levi's,27,20878,M,null
+1159,BOOKS,Fiction,The Great Gatsby,86,116569,null,null
+1160,FURNITURE,Chair,Dining Chair,56,173113,null,null
+1161,GROCERIES,Fruits,Bananas,69,139742,2092g,2024-07-16
+1162,FURNITURE,Table,Coffee Table,22,17169,null,null
+1163,ELECTRONICS,Smartphone,Samsung Galaxy S21,45,6511,null,null
+1164,ELECTRONICS,Smartphone,Samsung Galaxy S21,42,96503,null,null
+1165,FURNITURE,Table,Dining Table,51,189741,null,null
+1166,CLOTHING,Jeans,Lee,28,99143,L,null
+1167,CLOTHING,T-shirt,Puma,63,160818,S,null
+1168,ELECTRONICS,Smartphone,iPhone 12,34,160122,null,null
+1169,GROCERIES,Fruits,Bananas,37,94382,2181g,2024-08-30
+1170,GROCERIES,Dairy,Yogurt,92,56713,145g,2024-06-10
+1171,FURNITURE,Table,Dining Table,56,135072,null,null
+1172,GROCERIES,Dairy,Cheese,58,64219,4354g,2024-10-29
+1173,ELECTRONICS,Smartphone,Samsung Galaxy S21,90,39434,null,null
+1174,BOOKS,Fiction,1984,35,15593,null,null
+1175,GROCERIES,Fruits,Apples,59,14930,2901g,2024-09-10
+1176,ELECTRONICS,Smartphone,iPhone 12,62,110692,null,null
+1177,BOOKS,Fiction,1984,83,55934,null,null
+1178,FURNITURE,Table,Dining Table,87,140093,null,null
+1179,FURNITURE,Chair,Lounge Chair,11,139995,null,null
+1180,GROCERIES,Fruits,Bananas,56,149938,432g,2024-12-02
+1181,ELECTRONICS,Smartphone,Google Pixel 5,28,8106,null,null
+1182,GROCERIES,Dairy,Milk,44,57403,2851g,2025-03-08
+1183,BOOKS,Fiction,The Great Gatsby,62,154103,null,null
+1184,CLOTHING,T-shirt,Puma,78,152297,S,null
+1185,CLOTHING,T-shirt,Adidas,38,25384,M,null
+1186,CLOTHING,T-shirt,Adidas,29,153836,XL,null
+1187,ELECTRONICS,Laptop,Lenovo ThinkPad X1,32,183970,null,null
+1188,FURNITURE,Table,Coffee Table,57,108990,null,null
+1189,GROCERIES,Fruits,Oranges,75,125513,1315g,2024-10-27
+1190,FURNITURE,Table,Dining Table,53,149809,null,null
+1191,ELECTRONICS,Laptop,Dell XPS 13,74,138866,null,null
+1192,ELECTRONICS,Smartphone,Samsung Galaxy S21,56,179043,null,null
+1193,CLOTHING,Jeans,Levi's,90,177674,S,null
+1194,GROCERIES,Fruits,Oranges,18,151760,4784g,2024-07-03
+1195,GROCERIES,Fruits,Oranges,50,17487,1955g,2024-08-28
+1196,GROCERIES,Fruits,Apples,12,134109,3727g,2024-09-27
+1197,ELECTRONICS,Laptop,Lenovo ThinkPad X1,14,69204,null,null
+1198,BOOKS,Non-fiction,Sapiens,68,124396,null,null
+1199,GROCERIES,Dairy,Cheese,14,121506,1987g,2024-06-07
+1200,CLOTHING,Jeans,Lee,10,64621,S,null
+1201,BOOKS,Non-fiction,"Guns, Germs, and Steel",83,61923,null,null
+1202,FURNITURE,Chair,Dining Chair,86,143326,null,null
+1203,CLOTHING,T-shirt,Nike,99,31257,L,null
+1204,BOOKS,Fiction,To Kill a Mockingbird,86,123711,null,null
+1205,CLOTHING,Jeans,Levi's,39,83592,S,null
+1206,FURNITURE,Table,Dining Table,62,161758,null,null
+1207,GROCERIES,Fruits,Apples,38,11130,2796g,2024-09-17
+1208,GROCERIES,Fruits,Oranges,71,10269,4405g,2024-09-19
+1209,BOOKS,Fiction,The Great Gatsby,22,33543,null,null
+1210,FURNITURE,Chair,Dining Chair,89,179028,null,null
+1211,ELECTRONICS,Laptop,MacBook Pro,85,108769,null,null
+1212,ELECTRONICS,Laptop,MacBook Pro,93,97616,null,null
+1213,CLOTHING,Jeans,Lee,37,111001,S,null
+1214,ELECTRONICS,Smartphone,Samsung Galaxy S21,67,155012,null,null
+1215,FURNITURE,Chair,Office Chair,43,61633,null,null
+1216,ELECTRONICS,Smartphone,Google Pixel 5,65,190520,null,null
+1217,GROCERIES,Fruits,Apples,32,96966,103g,2025-03-19
+1218,FURNITURE,Table,Coffee Table,61,47642,null,null
+1219,CLOTHING,T-shirt,Puma,12,118301,S,null
+1220,CLOTHING,T-shirt,Adidas,65,35562,XL,null
+1221,BOOKS,Fiction,1984,24,113251,null,null
+1222,CLOTHING,T-shirt,Nike,75,110822,S,null
+1223,ELECTRONICS,Smartphone,iPhone 12,37,183955,null,null
+1224,ELECTRONICS,Laptop,Dell XPS 13,91,160788,null,null
+1225,GROCERIES,Fruits,Bananas,99,168875,3698g,2024-10-08
+1226,ELECTRONICS,Smartphone,Samsung Galaxy S21,30,67579,null,null
+1227,GROCERIES,Fruits,Oranges,17,28824,2658g,2025-01-13
+1228,BOOKS,Non-fiction,"Guns, Germs, and Steel",52,134064,null,null
+1229,ELECTRONICS,Smartphone,Samsung Galaxy S21,54,163603,null,null
+1230,ELECTRONICS,Smartphone,iPhone 12,82,82399,null,null
+1231,CLOTHING,T-shirt,Puma,58,58226,S,null
+1232,GROCERIES,Dairy,Milk,70,183443,4982g,2024-11-02
+1233,CLOTHING,Jeans,Wrangler,72,165449,M,null
+1234,ELECTRONICS,Laptop,MacBook Pro,63,45269,null,null
+1235,ELECTRONICS,Laptop,Lenovo ThinkPad X1,44,198632,null,null
+1236,GROCERIES,Dairy,Cheese,96,139109,2474g,2024-09-14
+1237,CLOTHING,T-shirt,Adidas,80,45683,S,null
+1238,GROCERIES,Dairy,Cheese,38,169303,865g,2025-03-25
+1239,ELECTRONICS,Smartphone,Google Pixel 5,86,81783,null,null
+1240,GROCERIES,Dairy,Cheese,100,143696,4749g,2025-02-18
+1241,ELECTRONICS,Smartphone,Google Pixel 5,97,181247,null,null
+1242,ELECTRONICS,Laptop,MacBook Pro,47,154501,null,null
+1243,CLOTHING,T-shirt,Puma,81,103025,L,null
+1244,GROCERIES,Dairy,Yogurt,94,134018,2117g,2024-08-24
+1245,FURNITURE,Table,Desk,10,101165,null,null
+1246,BOOKS,Non-fiction,The Sixth Extinction,49,108613,null,null
+1247,CLOTHING,Jeans,Wrangler,64,172503,S,null
+1248,FURNITURE,Table,Dining Table,74,121272,null,null
+1249,ELECTRONICS,Smartphone,iPhone 12,38,47615,null,null
+1250,ELECTRONICS,Laptop,Dell XPS 13,69,139088,null,null
+1251,BOOKS,Non-fiction,"Guns, Germs, and Steel",80,92898,null,null
+1252,CLOTHING,Jeans,Lee,50,195114,M,null
+1253,GROCERIES,Dairy,Milk,82,1543,3244g,2024-10-15
+1254,CLOTHING,Jeans,Lee,95,120883,XL,null
+1255,GROCERIES,Dairy,Cheese,56,170510,676g,2024-06-02
+1256,BOOKS,Non-fiction,Sapiens,53,64239,null,null
+1257,CLOTHING,T-shirt,Adidas,74,160711,M,null
+1258,BOOKS,Non-fiction,"Guns, Germs, and Steel",57,17194,null,null
+1259,FURNITURE,Chair,Dining Chair,69,70095,null,null
+1260,CLOTHING,T-shirt,Nike,51,123908,S,null
+1261,CLOTHING,T-shirt,Adidas,77,33821,S,null
+1262,ELECTRONICS,Smartphone,Google Pixel 5,11,187937,null,null
+1263,FURNITURE,Table,Desk,86,112579,null,null
+1264,BOOKS,Non-fiction,Sapiens,35,184886,null,null
+1265,GROCERIES,Dairy,Cheese,95,158669,1499g,2025-01-05
+1266,FURNITURE,Table,Coffee Table,30,115763,null,null
+1267,ELECTRONICS,Smartphone,Google Pixel 5,97,80343,null,null
+1268,BOOKS,Fiction,To Kill a Mockingbird,82,197220,null,null
+1269,CLOTHING,Jeans,Lee,63,100822,L,null
+1270,ELECTRONICS,Laptop,MacBook Pro,44,173357,null,null
+1271,BOOKS,Non-fiction,Sapiens,49,123363,null,null
+1272,FURNITURE,Table,Desk,76,177833,null,null
+1273,GROCERIES,Fruits,Bananas,25,172679,1563g,2024-10-09
+1274,FURNITURE,Table,Coffee Table,35,160564,null,null
+1275,BOOKS,Fiction,To Kill a Mockingbird,87,175973,null,null
+1276,FURNITURE,Table,Dining Table,86,112308,null,null
+1277,CLOTHING,T-shirt,Nike,56,140754,XL,null
+1278,BOOKS,Non-fiction,The Sixth Extinction,14,96320,null,null
+1279,BOOKS,Non-fiction,"Guns, Germs, and Steel",73,31642,null,null
+1280,ELECTRONICS,Smartphone,Samsung Galaxy S21,52,90143,null,null
+1281,ELECTRONICS,Laptop,Lenovo ThinkPad X1,67,48855,null,null
+1282,GROCERIES,Dairy,Cheese,99,173901,784g,2025-01-15
+1283,CLOTHING,Jeans,Lee,24,36213,L,null
+1284,GROCERIES,Dairy,Milk,97,62418,855g,2024-09-09
+1285,FURNITURE,Chair,Office Chair,61,74959,null,null
+1286,CLOTHING,T-shirt,Adidas,36,11324,L,null
+1287,CLOTHING,T-shirt,Puma,23,120422,M,null
+1288,GROCERIES,Dairy,Cheese,19,47769,131g,2024-05-23
+1289,FURNITURE,Chair,Office Chair,84,79522,null,null
+1290,GROCERIES,Fruits,Apples,63,5157,2824g,2025-03-20
+1291,ELECTRONICS,Laptop,Dell XPS 13,80,165489,null,null
+1292,BOOKS,Fiction,1984,17,62675,null,null
+1293,BOOKS,Non-fiction,The Sixth Extinction,19,10560,null,null
+1294,ELECTRONICS,Smartphone,iPhone 12,63,143944,null,null
+1295,GROCERIES,Fruits,Bananas,69,171820,2741g,2024-10-02
+1296,CLOTHING,T-shirt,Nike,46,118667,XL,null
+1297,ELECTRONICS,Smartphone,iPhone 12,25,147394,null,null
+1298,FURNITURE,Table,Dining Table,15,82932,null,null
+1299,FURNITURE,Chair,Dining Chair,40,187939,null,null
+1300,ELECTRONICS,Smartphone,Google Pixel 5,42,109820,null,null
+1301,FURNITURE,Chair,Lounge Chair,73,169914,null,null
+1302,ELECTRONICS,Laptop,Lenovo ThinkPad X1,30,199909,null,null
+1303,FURNITURE,Chair,Lounge Chair,40,74875,null,null
+1304,BOOKS,Non-fiction,Sapiens,39,108473,null,null
+1305,FURNITURE,Chair,Dining Chair,52,154224,null,null
+1306,CLOTHING,Jeans,Lee,39,9841,M,null
+1307,BOOKS,Fiction,The Great Gatsby,81,94030,null,null
+1308,ELECTRONICS,Smartphone,Samsung Galaxy S21,28,163483,null,null
+1309,ELECTRONICS,Laptop,MacBook Pro,34,117348,null,null
+1310,FURNITURE,Chair,Office Chair,90,115765,null,null
+1311,CLOTHING,T-shirt,Nike,83,83839,M,null
+1312,GROCERIES,Fruits,Apples,11,104292,2941g,2024-10-25
+1313,CLOTHING,Jeans,Wrangler,59,88213,XL,null
+1314,ELECTRONICS,Smartphone,Google Pixel 5,56,149114,null,null
+1315,FURNITURE,Table,Dining Table,74,36785,null,null
+1316,FURNITURE,Table,Coffee Table,91,165644,null,null
+1317,BOOKS,Non-fiction,Sapiens,88,128381,null,null
+1318,GROCERIES,Fruits,Oranges,71,187525,752g,2024-10-05
+1319,ELECTRONICS,Smartphone,Samsung Galaxy S21,11,168434,null,null
+1320,CLOTHING,Jeans,Levi's,13,95215,S,null
+1321,GROCERIES,Dairy,Milk,73,89825,2071g,2024-10-02
+1322,CLOTHING,T-shirt,Nike,63,14752,XL,null
+1323,FURNITURE,Table,Coffee Table,21,51312,null,null
+1324,GROCERIES,Fruits,Apples,74,38840,1142g,2024-10-15
+1325,FURNITURE,Chair,Dining Chair,35,113090,null,null
+1326,GROCERIES,Dairy,Cheese,22,55349,2309g,2024-12-20
+1327,GROCERIES,Fruits,Oranges,64,22988,235g,2025-02-05
+1328,ELECTRONICS,Laptop,MacBook Pro,68,70586,null,null
+1329,FURNITURE,Chair,Dining Chair,57,120422,null,null
+1330,BOOKS,Fiction,The Great Gatsby,83,103232,null,null
+1331,ELECTRONICS,Smartphone,Google Pixel 5,22,49351,null,null
+1332,ELECTRONICS,Smartphone,iPhone 12,26,13145,null,null
+1333,BOOKS,Fiction,1984,72,173674,null,null
+1334,ELECTRONICS,Smartphone,Samsung Galaxy S21,89,121784,null,null
+1335,FURNITURE,Table,Dining Table,19,767,null,null
+1336,GROCERIES,Fruits,Apples,69,140206,1509g,2024-07-07
+1337,CLOTHING,Jeans,Wrangler,60,7454,XL,null
+1338,FURNITURE,Chair,Lounge Chair,92,83551,null,null
+1339,BOOKS,Non-fiction,Sapiens,37,107275,null,null
+1340,ELECTRONICS,Laptop,Lenovo ThinkPad X1,80,27758,null,null
+1341,CLOTHING,T-shirt,Adidas,32,150626,XL,null
+1342,ELECTRONICS,Laptop,Lenovo ThinkPad X1,46,153206,null,null
+1343,FURNITURE,Table,Coffee Table,10,26148,null,null
+1344,BOOKS,Fiction,The Great Gatsby,50,199917,null,null
+1345,GROCERIES,Fruits,Bananas,50,149163,1336g,2024-11-09
+1346,CLOTHING,T-shirt,Nike,66,154793,XL,null
+1347,CLOTHING,Jeans,Lee,45,136721,S,null
+1348,CLOTHING,T-shirt,Nike,100,23262,S,null
+1349,FURNITURE,Chair,Lounge Chair,84,158415,null,null
+1350,ELECTRONICS,Smartphone,iPhone 12,99,22205,null,null
+1351,ELECTRONICS,Smartphone,Google Pixel 5,49,80130,null,null
+1352,BOOKS,Fiction,To Kill a Mockingbird,42,117240,null,null
+1353,BOOKS,Fiction,To Kill a Mockingbird,29,19007,null,null
+1354,FURNITURE,Table,Coffee Table,36,197193,null,null
+1355,GROCERIES,Dairy,Yogurt,84,64840,701g,2025-01-17
+1356,BOOKS,Fiction,To Kill a Mockingbird,37,53038,null,null
+1357,CLOTHING,Jeans,Levi's,82,182942,S,null
+1358,FURNITURE,Table,Dining Table,55,170831,null,null
+1359,FURNITURE,Table,Desk,27,170100,null,null
+1360,GROCERIES,Dairy,Cheese,53,177054,3407g,2024-12-30
+1361,GROCERIES,Fruits,Apples,85,51269,1500g,2025-03-01
+1362,CLOTHING,T-shirt,Nike,19,143531,M,null
+1363,GROCERIES,Dairy,Cheese,20,77283,3546g,2024-10-02
+1364,FURNITURE,Chair,Office Chair,77,146686,null,null
+1365,BOOKS,Non-fiction,The Sixth Extinction,22,7562,null,null
+1366,GROCERIES,Dairy,Milk,24,172621,1394g,2024-10-29
+1367,ELECTRONICS,Smartphone,Samsung Galaxy S21,35,29468,null,null
+1368,FURNITURE,Table,Coffee Table,14,67724,null,null
+1369,BOOKS,Non-fiction,Sapiens,88,185472,null,null
+1370,FURNITURE,Chair,Office Chair,35,50061,null,null
+1371,BOOKS,Fiction,The Great Gatsby,72,54154,null,null
+1372,FURNITURE,Table,Dining Table,26,82178,null,null
+1373,BOOKS,Non-fiction,"Guns, Germs, and Steel",14,105911,null,null
+1374,FURNITURE,Table,Desk,47,98359,null,null
+1375,BOOKS,Fiction,1984,63,56075,null,null
+1376,ELECTRONICS,Smartphone,Samsung Galaxy S21,59,190803,null,null
+1377,ELECTRONICS,Smartphone,Google Pixel 5,89,37860,null,null
+1378,FURNITURE,Table,Dining Table,96,159690,null,null
+1379,CLOTHING,T-shirt,Nike,36,189700,M,null
+1380,CLOTHING,T-shirt,Adidas,30,195882,S,null
+1381,ELECTRONICS,Laptop,Dell XPS 13,65,66985,null,null
+1382,BOOKS,Non-fiction,Sapiens,87,147893,null,null
+1383,ELECTRONICS,Smartphone,iPhone 12,97,71838,null,null
+1384,CLOTHING,T-shirt,Adidas,15,7009,XL,null
+1385,BOOKS,Fiction,To Kill a Mockingbird,44,87456,null,null
+1386,BOOKS,Fiction,The Great Gatsby,96,97437,null,null
+1387,ELECTRONICS,Laptop,Lenovo ThinkPad X1,77,93605,null,null
+1388,GROCERIES,Fruits,Bananas,68,3233,574g,2024-07-07
+1389,FURNITURE,Table,Dining Table,87,27868,null,null
+1390,CLOTHING,Jeans,Levi's,40,85046,L,null
+1391,BOOKS,Non-fiction,"Guns, Germs, and Steel",10,67272,null,null
+1392,CLOTHING,Jeans,Lee,72,36229,XL,null
+1393,BOOKS,Fiction,1984,64,101798,null,null
+1394,CLOTHING,T-shirt,Puma,72,46564,XL,null
+1395,GROCERIES,Dairy,Milk,18,137436,4893g,2024-07-22
+1396,FURNITURE,Table,Dining Table,34,69318,null,null
+1397,FURNITURE,Chair,Dining Chair,89,180648,null,null
+1398,FURNITURE,Chair,Dining Chair,51,5080,null,null
+1399,GROCERIES,Dairy,Cheese,21,85818,1656g,2024-11-17
+1400,BOOKS,Non-fiction,Sapiens,38,153595,null,null
+1401,ELECTRONICS,Laptop,MacBook Pro,94,177512,null,null
+1402,ELECTRONICS,Smartphone,Samsung Galaxy S21,44,16353,null,null
+1403,CLOTHING,Jeans,Lee,66,123135,XL,null
+1404,GROCERIES,Fruits,Oranges,21,31525,898g,2025-02-14
+1405,CLOTHING,T-shirt,Puma,66,167142,XL,null
+1406,GROCERIES,Fruits,Bananas,88,78157,3572g,2024-07-11
+1407,GROCERIES,Dairy,Yogurt,67,119294,1531g,2024-09-23
+1408,GROCERIES,Fruits,Apples,99,149261,377g,2024-06-21
+1409,BOOKS,Non-fiction,Sapiens,47,59613,null,null
+1410,BOOKS,Non-fiction,The Sixth Extinction,15,60250,null,null
+1411,FURNITURE,Table,Coffee Table,89,174437,null,null
+1412,BOOKS,Fiction,1984,34,160622,null,null
+1413,BOOKS,Fiction,To Kill a Mockingbird,100,127952,null,null
+1414,CLOTHING,Jeans,Lee,37,97325,L,null
+1415,ELECTRONICS,Laptop,Lenovo ThinkPad X1,75,179199,null,null
+1416,BOOKS,Non-fiction,"Guns, Germs, and Steel",13,187796,null,null
+1417,CLOTHING,Jeans,Lee,23,38648,XL,null
+1418,CLOTHING,Jeans,Lee,56,142416,XL,null
+1419,ELECTRONICS,Laptop,MacBook Pro,87,171341,null,null
+1420,CLOTHING,Jeans,Levi's,69,58242,M,null
+1421,ELECTRONICS,Smartphone,iPhone 12,94,117507,null,null
+1422,BOOKS,Fiction,1984,95,130059,null,null
+1423,CLOTHING,Jeans,Levi's,19,180003,S,null
+1424,CLOTHING,Jeans,Wrangler,51,1763,XL,null
+1425,GROCERIES,Dairy,Cheese,69,21127,1014g,2025-04-02
+1426,BOOKS,Fiction,To Kill a Mockingbird,25,56414,null,null
+1427,CLOTHING,T-shirt,Puma,52,179600,S,null
+1428,CLOTHING,T-shirt,Puma,11,103818,M,null
+1429,GROCERIES,Fruits,Bananas,64,168766,1313g,2024-07-15
+1430,ELECTRONICS,Laptop,Dell XPS 13,89,78859,null,null
+1431,CLOTHING,Jeans,Wrangler,20,97756,L,null
+1432,BOOKS,Non-fiction,Sapiens,21,2093,null,null
+1433,GROCERIES,Fruits,Apples,38,136789,204g,2025-02-21
+1434,CLOTHING,Jeans,Levi's,73,128638,L,null
+1435,CLOTHING,Jeans,Levi's,87,108979,L,null
+1436,GROCERIES,Fruits,Oranges,41,130710,1690g,2024-08-17
+1437,GROCERIES,Fruits,Apples,27,183085,4561g,2024-07-31
+1438,GROCERIES,Fruits,Apples,24,158252,612g,2024-12-12
+1439,ELECTRONICS,Smartphone,Samsung Galaxy S21,43,79176,null,null
+1440,GROCERIES,Fruits,Apples,54,107368,4942g,2024-07-07
+1441,GROCERIES,Fruits,Apples,64,196953,4741g,2025-03-02
+1442,CLOTHING,Jeans,Levi's,18,114054,L,null
+1443,BOOKS,Fiction,1984,38,173727,null,null
+1444,BOOKS,Non-fiction,"Guns, Germs, and Steel",73,2495,null,null
+1445,BOOKS,Fiction,To Kill a Mockingbird,15,119491,null,null
+1446,BOOKS,Non-fiction,Sapiens,58,145497,null,null
+1447,FURNITURE,Chair,Office Chair,74,140193,null,null
+1448,CLOTHING,Jeans,Levi's,47,10069,M,null
+1449,CLOTHING,T-shirt,Nike,91,142881,S,null
+1450,ELECTRONICS,Laptop,MacBook Pro,83,113803,null,null
+1451,BOOKS,Non-fiction,The Sixth Extinction,58,11030,null,null
+1452,FURNITURE,Table,Dining Table,66,187848,null,null
+1453,BOOKS,Fiction,To Kill a Mockingbird,55,171271,null,null
+1454,GROCERIES,Fruits,Apples,19,160743,3502g,2025-01-16
+1455,BOOKS,Fiction,To Kill a Mockingbird,97,156163,null,null
+1456,GROCERIES,Fruits,Bananas,100,145301,3970g,2024-07-13
+1457,BOOKS,Fiction,The Great Gatsby,99,26725,null,null
+1458,GROCERIES,Fruits,Apples,72,92902,1450g,2024-05-23
+1459,FURNITURE,Table,Dining Table,45,138416,null,null
+1460,BOOKS,Non-fiction,The Sixth Extinction,42,111539,null,null
+1461,GROCERIES,Fruits,Apples,34,177706,427g,2025-02-15
+1462,FURNITURE,Table,Desk,72,184051,null,null
+1463,CLOTHING,T-shirt,Puma,25,136272,XL,null
+1464,BOOKS,Fiction,To Kill a Mockingbird,15,135714,null,null
+1465,ELECTRONICS,Smartphone,iPhone 12,50,121417,null,null
+1466,GROCERIES,Dairy,Yogurt,67,161753,2097g,2024-10-05
+1467,FURNITURE,Chair,Office Chair,32,162255,null,null
+1468,BOOKS,Non-fiction,The Sixth Extinction,73,109081,null,null
+1469,BOOKS,Fiction,To Kill a Mockingbird,90,123190,null,null
+1470,GROCERIES,Dairy,Cheese,53,98557,4921g,2025-01-18
+1471,ELECTRONICS,Smartphone,iPhone 12,35,140869,null,null
+1472,GROCERIES,Fruits,Apples,60,147758,2274g,2024-05-12
+1473,GROCERIES,Dairy,Yogurt,14,41056,2050g,2024-05-26
+1474,FURNITURE,Chair,Office Chair,74,69873,null,null
+1475,FURNITURE,Table,Desk,26,195184,null,null
+1476,GROCERIES,Dairy,Yogurt,98,178555,3636g,2024-10-04
+1477,GROCERIES,Dairy,Yogurt,12,22944,1245g,2024-07-15
+1478,CLOTHING,Jeans,Wrangler,36,88247,S,null
+1479,CLOTHING,T-shirt,Adidas,64,105873,M,null
+1480,GROCERIES,Fruits,Bananas,98,192791,1199g,2024-06-02
+1481,BOOKS,Fiction,To Kill a Mockingbird,49,193937,null,null
+1482,GROCERIES,Dairy,Yogurt,26,138309,1681g,2024-09-11
+1483,ELECTRONICS,Laptop,Lenovo ThinkPad X1,76,118797,null,null
+1484,CLOTHING,Jeans,Wrangler,67,146526,M,null
+1485,FURNITURE,Table,Dining Table,74,111784,null,null
+1486,BOOKS,Fiction,1984,34,25967,null,null
+1487,ELECTRONICS,Laptop,MacBook Pro,99,173080,null,null
+1488,ELECTRONICS,Laptop,Lenovo ThinkPad X1,70,20139,null,null
+1489,CLOTHING,T-shirt,Puma,96,76406,M,null
+1490,ELECTRONICS,Smartphone,iPhone 12,60,85024,null,null
+1491,CLOTHING,T-shirt,Adidas,51,35837,M,null
+1492,FURNITURE,Chair,Lounge Chair,66,58019,null,null
+1493,FURNITURE,Chair,Office Chair,78,49445,null,null
+1494,CLOTHING,T-shirt,Puma,33,48003,S,null
+1495,FURNITURE,Chair,Dining Chair,35,102889,null,null
+1496,CLOTHING,T-shirt,Puma,86,135035,XL,null
+1497,ELECTRONICS,Smartphone,Samsung Galaxy S21,55,131440,null,null
+1498,FURNITURE,Chair,Office Chair,97,14968,null,null
+1499,GROCERIES,Dairy,Milk,92,37741,1364g,2025-01-20
+1500,BOOKS,Non-fiction,"Guns, Germs, and Steel",94,31599,null,null
+1501,GROCERIES,Dairy,Milk,63,179846,4701g,2024-06-01
+1502,ELECTRONICS,Smartphone,Google Pixel 5,97,146326,null,null
+1503,ELECTRONICS,Smartphone,iPhone 12,59,143002,null,null
+1504,CLOTHING,T-shirt,Adidas,44,52497,M,null
+1505,FURNITURE,Table,Dining Table,31,148921,null,null
+1506,FURNITURE,Table,Desk,82,522,null,null
+1507,BOOKS,Non-fiction,"Guns, Germs, and Steel",73,106042,null,null
+1508,GROCERIES,Dairy,Yogurt,46,30118,3822g,2024-10-24
+1509,FURNITURE,Chair,Dining Chair,67,54028,null,null
+1510,GROCERIES,Fruits,Apples,17,126501,3087g,2025-01-02
+1511,GROCERIES,Fruits,Bananas,11,114345,225g,2024-07-16
+1512,GROCERIES,Dairy,Cheese,38,142661,2411g,2024-10-23
+1513,CLOTHING,Jeans,Lee,23,80515,M,null
+1514,CLOTHING,Jeans,Wrangler,77,28199,XL,null
+1515,GROCERIES,Dairy,Milk,99,142863,2896g,2025-02-26
+1516,FURNITURE,Table,Dining Table,14,87162,null,null
+1517,BOOKS,Fiction,1984,94,166387,null,null
+1518,GROCERIES,Dairy,Cheese,33,181550,2301g,2024-10-27
+1519,BOOKS,Fiction,To Kill a Mockingbird,76,10776,null,null
+1520,BOOKS,Non-fiction,Sapiens,83,67303,null,null
+1521,BOOKS,Fiction,1984,95,42318,null,null
+1522,GROCERIES,Fruits,Apples,86,150294,4966g,2024-07-06
+1523,FURNITURE,Chair,Dining Chair,56,145596,null,null
+1524,FURNITURE,Table,Desk,11,144481,null,null
+1525,GROCERIES,Dairy,Yogurt,86,187523,505g,2024-05-22
+1526,GROCERIES,Dairy,Milk,24,146017,1392g,2025-01-21
+1527,ELECTRONICS,Smartphone,Google Pixel 5,40,126471,null,null
+1528,GROCERIES,Fruits,Apples,95,103556,980g,2025-01-13
+1529,FURNITURE,Chair,Lounge Chair,74,176403,null,null
+1530,CLOTHING,Jeans,Levi's,16,146721,L,null
+1531,FURNITURE,Chair,Office Chair,62,192570,null,null
+1532,BOOKS,Fiction,1984,21,14858,null,null
+1533,CLOTHING,T-shirt,Nike,25,48708,L,null
+1534,GROCERIES,Fruits,Apples,65,21758,763g,2025-02-18
+1535,BOOKS,Non-fiction,The Sixth Extinction,57,187897,null,null
+1536,CLOTHING,Jeans,Levi's,57,186966,XL,null
+1537,CLOTHING,Jeans,Levi's,48,126393,M,null
+1538,CLOTHING,Jeans,Levi's,67,196592,M,null
+1539,BOOKS,Fiction,The Great Gatsby,95,135252,null,null
+1540,GROCERIES,Fruits,Oranges,91,123719,2809g,2024-12-13
+1541,ELECTRONICS,Laptop,MacBook Pro,96,118319,null,null
+1542,FURNITURE,Chair,Dining Chair,34,87624,null,null
+1543,FURNITURE,Chair,Dining Chair,88,169548,null,null
+1544,GROCERIES,Dairy,Milk,83,48306,1174g,2024-09-21
+1545,GROCERIES,Dairy,Cheese,44,74919,3551g,2024-09-03
+1546,ELECTRONICS,Smartphone,Google Pixel 5,72,61400,null,null
+1547,CLOTHING,Jeans,Levi's,85,74525,M,null
+1548,FURNITURE,Chair,Dining Chair,80,160181,null,null
+1549,CLOTHING,Jeans,Lee,69,63297,L,null
+1550,FURNITURE,Chair,Dining Chair,72,162910,null,null
+1551,GROCERIES,Fruits,Oranges,100,171739,3778g,2025-03-03
+1552,CLOTHING,T-shirt,Puma,51,144783,L,null
+1553,GROCERIES,Fruits,Oranges,28,167704,2483g,2024-06-05
+1554,FURNITURE,Chair,Dining Chair,95,119978,null,null
+1555,FURNITURE,Table,Desk,92,113786,null,null
+1556,ELECTRONICS,Smartphone,Samsung Galaxy S21,41,134406,null,null
+1557,BOOKS,Non-fiction,Sapiens,11,197923,null,null
+1558,FURNITURE,Chair,Lounge Chair,26,85253,null,null
+1559,GROCERIES,Dairy,Milk,34,54295,669g,2024-12-07
+1560,CLOTHING,T-shirt,Puma,96,41176,S,null
+1561,CLOTHING,T-shirt,Nike,88,106697,M,null
+1562,GROCERIES,Dairy,Milk,93,102993,1960g,2024-12-30
+1563,GROCERIES,Dairy,Cheese,21,125350,2971g,2024-08-27
+1564,ELECTRONICS,Laptop,MacBook Pro,77,66817,null,null
+1565,BOOKS,Non-fiction,Sapiens,25,14295,null,null
+1566,GROCERIES,Dairy,Yogurt,69,88212,2618g,2025-02-04
+1567,GROCERIES,Dairy,Milk,53,46316,1079g,2024-12-08
+1568,FURNITURE,Table,Dining Table,79,24345,null,null
+1569,CLOTHING,Jeans,Lee,100,48972,L,null
+1570,CLOTHING,Jeans,Wrangler,26,108417,XL,null
+1571,CLOTHING,T-shirt,Adidas,16,23042,L,null
+1572,FURNITURE,Chair,Lounge Chair,25,5795,null,null
+1573,GROCERIES,Fruits,Apples,10,90329,2659g,2024-10-13
+1574,ELECTRONICS,Smartphone,iPhone 12,78,89638,null,null
+1575,ELECTRONICS,Laptop,Lenovo ThinkPad X1,45,79111,null,null
+1576,CLOTHING,T-shirt,Puma,92,17195,M,null
+1577,GROCERIES,Fruits,Bananas,88,141585,309g,2024-08-27
+1578,FURNITURE,Chair,Office Chair,18,154156,null,null
+1579,BOOKS,Non-fiction,"Guns, Germs, and Steel",99,166169,null,null
+1580,CLOTHING,T-shirt,Puma,32,122067,M,null
+1581,BOOKS,Non-fiction,"Guns, Germs, and Steel",15,167317,null,null
+1582,CLOTHING,Jeans,Levi's,74,195854,S,null
+1583,GROCERIES,Dairy,Yogurt,41,174310,4388g,2024-06-05
+1584,FURNITURE,Chair,Dining Chair,94,20070,null,null
+1585,CLOTHING,Jeans,Wrangler,60,114818,XL,null
+1586,CLOTHING,Jeans,Lee,89,197711,S,null
+1587,BOOKS,Fiction,The Great Gatsby,26,140204,null,null
+1588,BOOKS,Non-fiction,Sapiens,100,176282,null,null
+1589,GROCERIES,Dairy,Yogurt,87,96744,3288g,2024-11-03
+1590,GROCERIES,Fruits,Apples,81,105681,1743g,2025-01-02
+1591,FURNITURE,Table,Coffee Table,97,125382,null,null
+1592,CLOTHING,Jeans,Wrangler,35,159814,S,null
+1593,CLOTHING,Jeans,Lee,94,174860,L,null
+1594,ELECTRONICS,Laptop,Lenovo ThinkPad X1,89,159680,null,null
+1595,FURNITURE,Table,Coffee Table,22,59189,null,null
+1596,CLOTHING,T-shirt,Nike,78,95401,M,null
+1597,ELECTRONICS,Laptop,Lenovo ThinkPad X1,37,152315,null,null
+1598,GROCERIES,Fruits,Apples,95,74468,131g,2024-05-23
+1599,GROCERIES,Fruits,Oranges,92,130986,3119g,2025-02-13
+1600,BOOKS,Fiction,To Kill a Mockingbird,38,3610,null,null
+1601,GROCERIES,Fruits,Apples,37,19515,2460g,2024-10-16
+1602,ELECTRONICS,Laptop,Dell XPS 13,87,153484,null,null
+1603,CLOTHING,T-shirt,Adidas,91,12140,M,null
+1604,CLOTHING,Jeans,Lee,70,108700,L,null
+1605,FURNITURE,Table,Desk,81,59129,null,null
+1606,ELECTRONICS,Smartphone,Google Pixel 5,10,144296,null,null
+1607,FURNITURE,Table,Desk,91,80020,null,null
+1608,FURNITURE,Chair,Office Chair,25,45986,null,null
+1609,ELECTRONICS,Laptop,Lenovo ThinkPad X1,18,58233,null,null
+1610,BOOKS,Fiction,1984,59,121696,null,null
+1611,ELECTRONICS,Smartphone,Google Pixel 5,15,50923,null,null
+1612,GROCERIES,Fruits,Apples,41,116445,811g,2024-06-20
+1613,BOOKS,Fiction,1984,94,12464,null,null
+1614,FURNITURE,Chair,Dining Chair,62,184889,null,null
+1615,ELECTRONICS,Laptop,MacBook Pro,89,142685,null,null
+1616,ELECTRONICS,Laptop,Dell XPS 13,59,108218,null,null
+1617,CLOTHING,T-shirt,Adidas,19,105786,S,null
+1618,CLOTHING,Jeans,Lee,91,34557,XL,null
+1619,GROCERIES,Dairy,Yogurt,29,174506,141g,2024-09-11
+1620,CLOTHING,Jeans,Levi's,40,175217,S,null
+1621,BOOKS,Fiction,The Great Gatsby,98,60512,null,null
+1622,BOOKS,Fiction,1984,48,78255,null,null
+1623,ELECTRONICS,Smartphone,Samsung Galaxy S21,54,197727,null,null
+1624,BOOKS,Non-fiction,Sapiens,77,32157,null,null
+1625,CLOTHING,T-shirt,Puma,69,44680,XL,null
+1626,BOOKS,Fiction,To Kill a Mockingbird,29,198334,null,null
+1627,ELECTRONICS,Laptop,Lenovo ThinkPad X1,31,183233,null,null
+1628,FURNITURE,Chair,Dining Chair,29,129368,null,null
+1629,FURNITURE,Chair,Lounge Chair,14,165004,null,null
+1630,FURNITURE,Table,Dining Table,46,962,null,null
+1631,FURNITURE,Table,Coffee Table,46,153566,null,null
+1632,CLOTHING,Jeans,Lee,57,144064,M,null
+1633,FURNITURE,Table,Coffee Table,81,36543,null,null
+1634,ELECTRONICS,Smartphone,iPhone 12,86,107594,null,null
+1635,FURNITURE,Chair,Office Chair,88,35795,null,null
+1636,CLOTHING,Jeans,Levi's,62,66491,XL,null
+1637,BOOKS,Fiction,1984,73,178457,null,null
+1638,ELECTRONICS,Laptop,Dell XPS 13,87,86850,null,null
+1639,CLOTHING,Jeans,Wrangler,21,171200,L,null
+1640,FURNITURE,Chair,Office Chair,20,110328,null,null
+1641,BOOKS,Fiction,To Kill a Mockingbird,21,89078,null,null
+1642,BOOKS,Non-fiction,Sapiens,32,3775,null,null
+1643,ELECTRONICS,Laptop,MacBook Pro,55,179094,null,null
+1644,FURNITURE,Table,Dining Table,14,159449,null,null
+1645,BOOKS,Non-fiction,"Guns, Germs, and Steel",34,191411,null,null
+1646,CLOTHING,T-shirt,Puma,87,71092,S,null
+1647,CLOTHING,Jeans,Lee,48,77750,M,null
+1648,CLOTHING,Jeans,Wrangler,69,165139,L,null
+1649,CLOTHING,T-shirt,Nike,23,129708,XL,null
+1650,GROCERIES,Dairy,Yogurt,48,113319,3763g,2024-07-28
+1651,ELECTRONICS,Laptop,Dell XPS 13,56,191531,null,null
+1652,FURNITURE,Chair,Lounge Chair,77,36438,null,null
+1653,ELECTRONICS,Laptop,MacBook Pro,24,6110,null,null
+1654,ELECTRONICS,Smartphone,Google Pixel 5,63,134416,null,null
+1655,GROCERIES,Fruits,Oranges,76,169843,4771g,2024-08-28
+1656,ELECTRONICS,Smartphone,iPhone 12,36,8368,null,null
+1657,BOOKS,Fiction,The Great Gatsby,53,98217,null,null
+1658,ELECTRONICS,Smartphone,iPhone 12,20,53953,null,null
+1659,CLOTHING,T-shirt,Adidas,47,109685,S,null
+1660,GROCERIES,Fruits,Apples,67,71604,3650g,2024-11-16
+1661,ELECTRONICS,Smartphone,Samsung Galaxy S21,45,113809,null,null
+1662,FURNITURE,Table,Coffee Table,42,195418,null,null
+1663,BOOKS,Non-fiction,The Sixth Extinction,96,71094,null,null
+1664,BOOKS,Non-fiction,Sapiens,79,47034,null,null
+1665,CLOTHING,Jeans,Wrangler,86,131957,XL,null
+1666,FURNITURE,Chair,Lounge Chair,80,148149,null,null
+1667,ELECTRONICS,Laptop,MacBook Pro,20,56823,null,null
+1668,BOOKS,Fiction,The Great Gatsby,57,122697,null,null
+1669,GROCERIES,Fruits,Oranges,35,63191,1055g,2024-07-18
+1670,BOOKS,Non-fiction,The Sixth Extinction,46,30278,null,null
+1671,GROCERIES,Dairy,Milk,33,21799,629g,2024-06-07
+1672,ELECTRONICS,Laptop,Lenovo ThinkPad X1,12,52813,null,null
+1673,BOOKS,Non-fiction,The Sixth Extinction,78,95032,null,null
+1674,FURNITURE,Chair,Office Chair,12,74211,null,null
+1675,FURNITURE,Table,Dining Table,81,48007,null,null
+1676,ELECTRONICS,Smartphone,Google Pixel 5,43,199453,null,null
+1677,GROCERIES,Fruits,Oranges,98,59250,3424g,2024-08-03
+1678,FURNITURE,Table,Desk,76,138349,null,null
+1679,BOOKS,Fiction,The Great Gatsby,50,172968,null,null
+1680,BOOKS,Fiction,To Kill a Mockingbird,83,6611,null,null
+1681,BOOKS,Fiction,1984,76,108031,null,null
+1682,ELECTRONICS,Smartphone,Samsung Galaxy S21,66,2817,null,null
+1683,ELECTRONICS,Laptop,Lenovo ThinkPad X1,66,143429,null,null
+1684,ELECTRONICS,Smartphone,Google Pixel 5,13,25567,null,null
+1685,ELECTRONICS,Laptop,Lenovo ThinkPad X1,89,151825,null,null
+1686,CLOTHING,Jeans,Lee,58,101697,S,null
+1687,CLOTHING,Jeans,Wrangler,92,183305,M,null
+1688,GROCERIES,Dairy,Cheese,45,126906,595g,2024-07-07
+1689,ELECTRONICS,Laptop,Dell XPS 13,22,40809,null,null
+1690,GROCERIES,Dairy,Milk,38,86795,2994g,2024-12-29
+1691,BOOKS,Non-fiction,"Guns, Germs, and Steel",33,84440,null,null
+1692,FURNITURE,Chair,Office Chair,34,26108,null,null
+1693,FURNITURE,Table,Desk,87,35459,null,null
+1694,GROCERIES,Fruits,Bananas,94,166027,3452g,2025-01-16
+1695,ELECTRONICS,Laptop,MacBook Pro,83,22314,null,null
+1696,FURNITURE,Chair,Lounge Chair,26,179740,null,null
+1697,GROCERIES,Fruits,Apples,79,35566,1042g,2025-03-17
+1698,CLOTHING,Jeans,Levi's,37,95512,M,null
+1699,BOOKS,Fiction,1984,77,92956,null,null
+1700,GROCERIES,Dairy,Yogurt,28,31877,130g,2024-08-06
+1701,BOOKS,Fiction,1984,54,114879,null,null
+1702,ELECTRONICS,Laptop,MacBook Pro,93,12765,null,null
+1703,CLOTHING,T-shirt,Puma,55,10194,M,null
+1704,ELECTRONICS,Laptop,Dell XPS 13,30,73997,null,null
+1705,CLOTHING,T-shirt,Nike,80,106348,M,null
+1706,BOOKS,Fiction,The Great Gatsby,63,9806,null,null
+1707,CLOTHING,T-shirt,Adidas,85,93364,L,null
+1708,GROCERIES,Dairy,Cheese,30,150027,4569g,2025-02-14
+1709,GROCERIES,Dairy,Cheese,97,139988,3596g,2025-03-02
+1710,BOOKS,Fiction,To Kill a Mockingbird,63,180151,null,null
+1711,ELECTRONICS,Smartphone,Samsung Galaxy S21,65,67025,null,null
+1712,ELECTRONICS,Smartphone,iPhone 12,66,175897,null,null
+1713,ELECTRONICS,Laptop,MacBook Pro,85,154605,null,null
+1714,ELECTRONICS,Laptop,MacBook Pro,85,53494,null,null
+1715,ELECTRONICS,Laptop,Lenovo ThinkPad X1,82,108366,null,null
+1716,GROCERIES,Dairy,Yogurt,78,6201,3145g,2024-09-17
+1717,ELECTRONICS,Smartphone,Samsung Galaxy S21,30,83600,null,null
+1718,CLOTHING,Jeans,Wrangler,34,91908,S,null
+1719,CLOTHING,Jeans,Levi's,18,29727,L,null
+1720,FURNITURE,Chair,Lounge Chair,21,56139,null,null
+1721,FURNITURE,Table,Desk,83,81242,null,null
+1722,BOOKS,Non-fiction,The Sixth Extinction,33,2398,null,null
+1723,FURNITURE,Chair,Dining Chair,21,117153,null,null
+1724,FURNITURE,Chair,Office Chair,17,178285,null,null
+1725,BOOKS,Fiction,1984,75,73456,null,null
+1726,CLOTHING,Jeans,Wrangler,17,133947,M,null
+1727,BOOKS,Non-fiction,The Sixth Extinction,60,7095,null,null
+1728,CLOTHING,Jeans,Wrangler,29,37224,XL,null
+1729,ELECTRONICS,Laptop,Lenovo ThinkPad X1,29,142622,null,null
+1730,FURNITURE,Table,Dining Table,58,170906,null,null
+1731,BOOKS,Fiction,To Kill a Mockingbird,19,158212,null,null
+1732,BOOKS,Fiction,To Kill a Mockingbird,75,65275,null,null
+1733,FURNITURE,Chair,Lounge Chair,38,17631,null,null
+1734,CLOTHING,Jeans,Wrangler,92,109968,M,null
+1735,BOOKS,Non-fiction,The Sixth Extinction,18,21321,null,null
+1736,FURNITURE,Chair,Office Chair,74,20806,null,null
+1737,FURNITURE,Table,Dining Table,79,30110,null,null
+1738,ELECTRONICS,Laptop,Dell XPS 13,15,137722,null,null
+1739,CLOTHING,Jeans,Wrangler,81,124603,XL,null
+1740,BOOKS,Fiction,To Kill a Mockingbird,92,56326,null,null
+1741,GROCERIES,Fruits,Bananas,84,99594,2370g,2024-12-01
+1742,ELECTRONICS,Laptop,Lenovo ThinkPad X1,50,133035,null,null
+1743,ELECTRONICS,Laptop,Dell XPS 13,97,185135,null,null
+1744,CLOTHING,T-shirt,Puma,13,177515,XL,null
+1745,GROCERIES,Dairy,Milk,55,81511,1441g,2025-03-21
+1746,GROCERIES,Fruits,Apples,44,182817,1976g,2025-02-18
+1747,CLOTHING,T-shirt,Adidas,58,42857,XL,null
+1748,BOOKS,Fiction,1984,28,87789,null,null
+1749,ELECTRONICS,Laptop,Dell XPS 13,19,169715,null,null
+1750,BOOKS,Fiction,1984,37,139595,null,null
+1751,CLOTHING,T-shirt,Adidas,33,189044,XL,null
+1752,FURNITURE,Chair,Lounge Chair,98,156973,null,null
+1753,GROCERIES,Dairy,Milk,62,80291,2725g,2024-08-10
+1754,CLOTHING,Jeans,Wrangler,20,59997,S,null
+1755,GROCERIES,Dairy,Cheese,98,100833,3020g,2025-03-30
+1756,GROCERIES,Dairy,Milk,46,5183,2499g,2024-08-18
+1757,CLOTHING,Jeans,Wrangler,28,100263,M,null
+1758,GROCERIES,Dairy,Cheese,75,123215,3567g,2024-11-16
+1759,GROCERIES,Dairy,Cheese,29,162888,1136g,2024-08-13
+1760,BOOKS,Fiction,1984,37,21574,null,null
+1761,ELECTRONICS,Smartphone,iPhone 12,38,181992,null,null
+1762,BOOKS,Fiction,The Great Gatsby,86,20024,null,null
+1763,ELECTRONICS,Laptop,Dell XPS 13,58,199905,null,null
+1764,BOOKS,Non-fiction,The Sixth Extinction,90,181242,null,null
+1765,GROCERIES,Dairy,Yogurt,40,176243,882g,2024-11-26
+1766,GROCERIES,Dairy,Milk,27,72719,3749g,2024-11-24
+1767,ELECTRONICS,Laptop,MacBook Pro,44,197918,null,null
+1768,FURNITURE,Chair,Office Chair,76,90391,null,null
+1769,BOOKS,Non-fiction,"Guns, Germs, and Steel",19,155310,null,null
+1770,FURNITURE,Chair,Dining Chair,17,47645,null,null
+1771,CLOTHING,Jeans,Wrangler,72,139403,S,null
+1772,FURNITURE,Chair,Dining Chair,18,188647,null,null
+1773,BOOKS,Non-fiction,"Guns, Germs, and Steel",41,22538,null,null
+1774,CLOTHING,Jeans,Wrangler,96,20267,L,null
+1775,GROCERIES,Dairy,Cheese,28,67191,3525g,2024-07-16
+1776,FURNITURE,Table,Dining Table,94,104939,null,null
+1777,GROCERIES,Dairy,Milk,51,140927,1064g,2024-07-29
+1778,FURNITURE,Table,Desk,61,99961,null,null
+1779,GROCERIES,Dairy,Cheese,65,140108,679g,2024-11-07
+1780,GROCERIES,Fruits,Apples,32,41484,244g,2024-12-07
+1781,ELECTRONICS,Laptop,MacBook Pro,90,180171,null,null
+1782,GROCERIES,Fruits,Bananas,18,167982,704g,2024-12-22
+1783,ELECTRONICS,Laptop,MacBook Pro,68,139634,null,null
+1784,GROCERIES,Dairy,Milk,99,158978,1006g,2025-01-15
+1785,CLOTHING,T-shirt,Puma,48,129756,L,null
+1786,GROCERIES,Fruits,Bananas,63,79347,2458g,2024-10-11
+1787,ELECTRONICS,Smartphone,Samsung Galaxy S21,82,12236,null,null
+1788,CLOTHING,Jeans,Levi's,76,104496,M,null
+1789,BOOKS,Fiction,1984,20,14774,null,null
+1790,FURNITURE,Chair,Lounge Chair,23,155882,null,null
+1791,ELECTRONICS,Laptop,MacBook Pro,11,46567,null,null
+1792,ELECTRONICS,Smartphone,iPhone 12,63,50142,null,null
+1793,CLOTHING,T-shirt,Puma,82,46506,S,null
+1794,ELECTRONICS,Laptop,Lenovo ThinkPad X1,48,119451,null,null
+1795,FURNITURE,Chair,Dining Chair,46,23095,null,null
+1796,CLOTHING,T-shirt,Puma,25,56938,S,null
+1797,CLOTHING,T-shirt,Nike,32,151168,XL,null
+1798,ELECTRONICS,Laptop,Dell XPS 13,70,154389,null,null
+1799,GROCERIES,Fruits,Apples,33,179698,4859g,2024-07-13
+1800,ELECTRONICS,Laptop,Lenovo ThinkPad X1,37,95212,null,null
+1801,ELECTRONICS,Smartphone,Samsung Galaxy S21,11,143355,null,null
+1802,FURNITURE,Table,Coffee Table,79,70834,null,null
+1803,CLOTHING,Jeans,Wrangler,57,15231,S,null
+1804,BOOKS,Fiction,To Kill a Mockingbird,27,47885,null,null
+1805,FURNITURE,Chair,Dining Chair,95,98892,null,null
+1806,GROCERIES,Dairy,Milk,12,58348,1478g,2025-03-15
+1807,ELECTRONICS,Laptop,Lenovo ThinkPad X1,52,37412,null,null
+1808,ELECTRONICS,Smartphone,Samsung Galaxy S21,79,138567,null,null
+1809,GROCERIES,Fruits,Oranges,33,33656,2108g,2024-10-06
+1810,ELECTRONICS,Smartphone,iPhone 12,93,56820,null,null
+1811,CLOTHING,Jeans,Levi's,59,69274,XL,null
+1812,FURNITURE,Chair,Lounge Chair,49,28272,null,null
+1813,FURNITURE,Chair,Dining Chair,86,21241,null,null
+1814,FURNITURE,Table,Coffee Table,95,121883,null,null
+1815,BOOKS,Non-fiction,Sapiens,11,175080,null,null
+1816,GROCERIES,Dairy,Yogurt,91,9194,383g,2025-03-22
+1817,CLOTHING,Jeans,Levi's,71,143656,S,null
+1818,GROCERIES,Fruits,Apples,46,85940,1314g,2025-02-11
+1819,ELECTRONICS,Laptop,Dell XPS 13,55,189962,null,null
+1820,GROCERIES,Fruits,Apples,40,44314,541g,2024-12-08
+1821,CLOTHING,T-shirt,Puma,22,79578,L,null
+1822,GROCERIES,Fruits,Oranges,48,128767,3635g,2024-06-30
+1823,GROCERIES,Fruits,Oranges,92,181134,259g,2024-10-07
+1824,GROCERIES,Dairy,Yogurt,87,6011,2297g,2024-11-23
+1825,CLOTHING,Jeans,Levi's,46,104974,XL,null
+1826,FURNITURE,Chair,Dining Chair,39,105196,null,null
+1827,ELECTRONICS,Laptop,MacBook Pro,87,167600,null,null
+1828,FURNITURE,Chair,Office Chair,42,193251,null,null
+1829,FURNITURE,Chair,Lounge Chair,100,27338,null,null
+1830,BOOKS,Fiction,To Kill a Mockingbird,88,118222,null,null
+1831,FURNITURE,Table,Coffee Table,87,78714,null,null
+1832,GROCERIES,Dairy,Yogurt,19,121946,4085g,2024-10-13
+1833,CLOTHING,T-shirt,Puma,16,149202,M,null
+1834,GROCERIES,Fruits,Bananas,37,132741,921g,2024-06-21
+1835,BOOKS,Non-fiction,Sapiens,89,84661,null,null
+1836,FURNITURE,Chair,Office Chair,59,71789,null,null
+1837,FURNITURE,Table,Dining Table,45,185513,null,null
+1838,BOOKS,Non-fiction,"Guns, Germs, and Steel",32,73391,null,null
+1839,BOOKS,Fiction,1984,58,92147,null,null
+1840,FURNITURE,Table,Dining Table,15,171345,null,null
+1841,FURNITURE,Chair,Lounge Chair,30,15287,null,null
+1842,ELECTRONICS,Laptop,Lenovo ThinkPad X1,72,144900,null,null
+1843,BOOKS,Non-fiction,Sapiens,68,128279,null,null
+1844,BOOKS,Non-fiction,Sapiens,42,6829,null,null
+1845,FURNITURE,Table,Dining Table,80,178545,null,null
+1846,CLOTHING,T-shirt,Adidas,99,192723,S,null
+1847,CLOTHING,Jeans,Lee,11,192206,S,null
+1848,FURNITURE,Chair,Lounge Chair,23,153128,null,null
+1849,GROCERIES,Fruits,Bananas,88,77410,3695g,2024-08-15
+1850,FURNITURE,Table,Coffee Table,99,129713,null,null
+1851,ELECTRONICS,Smartphone,iPhone 12,38,28119,null,null
+1852,BOOKS,Fiction,To Kill a Mockingbird,94,154581,null,null
+1853,ELECTRONICS,Smartphone,iPhone 12,56,34630,null,null
+1854,GROCERIES,Dairy,Yogurt,53,102314,2140g,2024-06-26
+1855,CLOTHING,Jeans,Levi's,89,58685,XL,null
+1856,CLOTHING,T-shirt,Nike,26,49492,S,null
+1857,CLOTHING,Jeans,Levi's,54,84739,XL,null
+1858,ELECTRONICS,Smartphone,Google Pixel 5,85,109169,null,null
+1859,FURNITURE,Table,Dining Table,43,92831,null,null
+1860,FURNITURE,Chair,Lounge Chair,84,36857,null,null
+1861,FURNITURE,Table,Desk,87,51257,null,null
+1862,ELECTRONICS,Laptop,MacBook Pro,46,184314,null,null
+1863,GROCERIES,Fruits,Bananas,11,123373,2185g,2025-02-22
+1864,FURNITURE,Table,Coffee Table,35,177276,null,null
+1865,ELECTRONICS,Smartphone,Samsung Galaxy S21,85,19756,null,null
+1866,FURNITURE,Table,Dining Table,52,117374,null,null
+1867,GROCERIES,Dairy,Yogurt,66,34430,3084g,2024-10-28
+1868,CLOTHING,T-shirt,Puma,92,94417,S,null
+1869,GROCERIES,Dairy,Milk,33,102512,3596g,2024-07-31
+1870,BOOKS,Non-fiction,"Guns, Germs, and Steel",44,168984,null,null
+1871,GROCERIES,Fruits,Oranges,17,137870,1707g,2024-08-28
+1872,ELECTRONICS,Laptop,Dell XPS 13,77,58319,null,null
+1873,FURNITURE,Table,Dining Table,44,162009,null,null
+1874,GROCERIES,Fruits,Oranges,92,10105,4285g,2024-11-09
+1875,ELECTRONICS,Laptop,Dell XPS 13,39,89531,null,null
+1876,GROCERIES,Fruits,Apples,16,73838,3248g,2024-11-10
+1877,GROCERIES,Dairy,Cheese,48,150193,1703g,2024-09-12
+1878,FURNITURE,Chair,Office Chair,82,142826,null,null
+1879,CLOTHING,T-shirt,Nike,45,154333,XL,null
+1880,CLOTHING,Jeans,Wrangler,84,189246,M,null
+1881,CLOTHING,Jeans,Levi's,52,22153,S,null
+1882,GROCERIES,Dairy,Milk,45,159636,4918g,2024-10-03
+1883,ELECTRONICS,Laptop,Lenovo ThinkPad X1,57,173273,null,null
+1884,ELECTRONICS,Smartphone,Google Pixel 5,41,7831,null,null
+1885,CLOTHING,T-shirt,Puma,99,75587,L,null
+1886,BOOKS,Fiction,The Great Gatsby,62,68466,null,null
+1887,ELECTRONICS,Smartphone,iPhone 12,52,150776,null,null
+1888,ELECTRONICS,Laptop,MacBook Pro,32,10177,null,null
+1889,BOOKS,Fiction,To Kill a Mockingbird,12,145911,null,null
+1890,BOOKS,Fiction,The Great Gatsby,44,4088,null,null
+1891,ELECTRONICS,Laptop,Lenovo ThinkPad X1,33,94205,null,null
+1892,GROCERIES,Fruits,Oranges,23,136203,4204g,2025-03-01
+1893,ELECTRONICS,Laptop,Lenovo ThinkPad X1,88,12790,null,null
+1894,GROCERIES,Fruits,Apples,16,46993,2859g,2024-07-11
+1895,BOOKS,Fiction,To Kill a Mockingbird,71,2045,null,null
+1896,ELECTRONICS,Laptop,Lenovo ThinkPad X1,88,33723,null,null
+1897,BOOKS,Non-fiction,Sapiens,98,184268,null,null
+1898,ELECTRONICS,Smartphone,Samsung Galaxy S21,98,137700,null,null
+1899,FURNITURE,Chair,Lounge Chair,49,74450,null,null
+1900,FURNITURE,Table,Dining Table,95,175948,null,null
+1901,FURNITURE,Table,Coffee Table,81,135211,null,null
+1902,BOOKS,Fiction,The Great Gatsby,27,89199,null,null
+1903,FURNITURE,Table,Desk,15,164745,null,null
+1904,ELECTRONICS,Smartphone,Samsung Galaxy S21,43,85991,null,null
+1905,GROCERIES,Fruits,Oranges,82,11285,627g,2024-09-14
+1906,CLOTHING,T-shirt,Nike,34,88174,L,null
+1907,GROCERIES,Fruits,Oranges,86,176943,1526g,2024-08-13
+1908,GROCERIES,Dairy,Yogurt,51,167803,3209g,2024-05-28
+1909,FURNITURE,Table,Desk,85,135875,null,null
+1910,FURNITURE,Chair,Dining Chair,81,170654,null,null
+1911,FURNITURE,Table,Desk,94,80382,null,null
+1912,GROCERIES,Fruits,Oranges,61,130505,3085g,2024-07-30
+1913,BOOKS,Non-fiction,"Guns, Germs, and Steel",98,13763,null,null
+1914,GROCERIES,Dairy,Cheese,91,165457,1062g,2024-12-30
+1915,BOOKS,Fiction,The Great Gatsby,37,55570,null,null
+1916,ELECTRONICS,Laptop,MacBook Pro,57,170687,null,null
+1917,ELECTRONICS,Smartphone,Google Pixel 5,56,100480,null,null
+1918,FURNITURE,Table,Desk,81,74588,null,null
+1919,BOOKS,Non-fiction,Sapiens,61,12408,null,null
+1920,ELECTRONICS,Laptop,Lenovo ThinkPad X1,46,134461,null,null
+1921,CLOTHING,T-shirt,Puma,91,64455,L,null
+1922,GROCERIES,Dairy,Yogurt,98,37205,1525g,2024-10-26
+1923,CLOTHING,Jeans,Levi's,45,183913,M,null
+1924,ELECTRONICS,Laptop,Lenovo ThinkPad X1,18,57055,null,null
+1925,CLOTHING,T-shirt,Nike,27,28482,M,null
+1926,ELECTRONICS,Smartphone,Google Pixel 5,73,5791,null,null
+1927,GROCERIES,Dairy,Yogurt,19,157367,3112g,2025-02-06
+1928,CLOTHING,Jeans,Wrangler,90,74195,XL,null
+1929,CLOTHING,T-shirt,Puma,71,118867,M,null
+1930,CLOTHING,Jeans,Wrangler,63,107710,L,null
+1931,CLOTHING,Jeans,Levi's,40,19967,M,null
+1932,GROCERIES,Dairy,Milk,62,31500,3347g,2025-03-23
+1933,FURNITURE,Table,Coffee Table,66,129677,null,null
+1934,ELECTRONICS,Laptop,MacBook Pro,78,187332,null,null
+1935,GROCERIES,Dairy,Milk,58,197077,3838g,2024-12-24
+1936,FURNITURE,Table,Desk,37,127199,null,null
+1937,BOOKS,Fiction,To Kill a Mockingbird,77,195165,null,null
+1938,ELECTRONICS,Smartphone,iPhone 12,83,167459,null,null
+1939,CLOTHING,T-shirt,Nike,100,18782,L,null
+1940,FURNITURE,Chair,Dining Chair,54,154916,null,null
+1941,GROCERIES,Fruits,Oranges,93,137264,2536g,2025-02-27
+1942,GROCERIES,Dairy,Milk,68,145681,3784g,2025-03-13
+1943,GROCERIES,Fruits,Apples,21,175926,1545g,2025-03-26
+1944,ELECTRONICS,Laptop,Dell XPS 13,74,5808,null,null
+1945,GROCERIES,Dairy,Yogurt,29,199304,4091g,2024-08-29
+1946,BOOKS,Non-fiction,Sapiens,16,118483,null,null
+1947,FURNITURE,Chair,Dining Chair,60,34619,null,null
+1948,GROCERIES,Dairy,Yogurt,10,193187,1539g,2025-03-08
+1949,BOOKS,Fiction,To Kill a Mockingbird,48,186672,null,null
+1950,BOOKS,Fiction,The Great Gatsby,51,74000,null,null
+1951,BOOKS,Non-fiction,Sapiens,74,178382,null,null
+1952,GROCERIES,Dairy,Cheese,78,44064,1588g,2025-03-11
+1953,ELECTRONICS,Smartphone,Google Pixel 5,19,14705,null,null
+1954,ELECTRONICS,Smartphone,Google Pixel 5,58,13042,null,null
+1955,ELECTRONICS,Laptop,MacBook Pro,46,77577,null,null
+1956,CLOTHING,Jeans,Levi's,69,60518,XL,null
+1957,ELECTRONICS,Smartphone,iPhone 12,53,152803,null,null
+1958,BOOKS,Non-fiction,The Sixth Extinction,58,182349,null,null
+1959,GROCERIES,Fruits,Bananas,40,127527,2994g,2024-06-19
+1960,GROCERIES,Fruits,Oranges,47,17655,729g,2024-08-27
+1961,BOOKS,Fiction,1984,94,49650,null,null
+1962,BOOKS,Fiction,To Kill a Mockingbird,39,83183,null,null
+1963,FURNITURE,Chair,Office Chair,47,134043,null,null
+1964,BOOKS,Fiction,The Great Gatsby,16,17555,null,null
+1965,GROCERIES,Fruits,Oranges,88,169756,1647g,2024-10-15
+1966,ELECTRONICS,Laptop,Lenovo ThinkPad X1,32,195111,null,null
+1967,FURNITURE,Chair,Office Chair,98,77331,null,null
+1968,FURNITURE,Table,Coffee Table,61,188793,null,null
+1969,FURNITURE,Table,Dining Table,63,170506,null,null
+1970,CLOTHING,Jeans,Wrangler,70,69499,XL,null
+1971,GROCERIES,Dairy,Milk,49,199656,3317g,2024-05-18
+1972,FURNITURE,Table,Desk,98,105062,null,null
+1973,BOOKS,Non-fiction,The Sixth Extinction,69,128587,null,null
+1974,CLOTHING,T-shirt,Nike,15,151944,XL,null
+1975,ELECTRONICS,Smartphone,Google Pixel 5,49,157985,null,null
+1976,BOOKS,Fiction,To Kill a Mockingbird,37,73307,null,null
+1977,FURNITURE,Chair,Lounge Chair,84,101552,null,null
+1978,GROCERIES,Fruits,Apples,70,115186,776g,2025-01-12
+1979,FURNITURE,Chair,Lounge Chair,64,1760,null,null
+1980,ELECTRONICS,Laptop,Lenovo ThinkPad X1,96,118168,null,null
+1981,FURNITURE,Chair,Lounge Chair,89,99174,null,null
+1982,FURNITURE,Chair,Lounge Chair,51,100616,null,null
+1983,GROCERIES,Dairy,Cheese,48,155143,1123g,2024-07-25
+1984,ELECTRONICS,Smartphone,Google Pixel 5,32,46098,null,null
+1985,CLOTHING,Jeans,Lee,54,79078,M,null
+1986,FURNITURE,Chair,Office Chair,83,168457,null,null
+1987,FURNITURE,Table,Dining Table,67,174525,null,null
+1988,FURNITURE,Chair,Dining Chair,21,81049,null,null
+1989,CLOTHING,T-shirt,Nike,57,13025,XL,null
+1990,BOOKS,Fiction,1984,89,87948,null,null
+1991,BOOKS,Non-fiction,"Guns, Germs, and Steel",36,15598,null,null
+1992,ELECTRONICS,Smartphone,Google Pixel 5,52,31826,null,null
+1993,ELECTRONICS,Laptop,Lenovo ThinkPad X1,100,162836,null,null
+1994,FURNITURE,Chair,Lounge Chair,72,192210,null,null
+1995,ELECTRONICS,Laptop,MacBook Pro,28,31685,null,null
+1996,ELECTRONICS,Smartphone,iPhone 12,42,17802,null,null
+1997,FURNITURE,Table,Dining Table,46,36439,null,null
+1998,CLOTHING,T-shirt,Puma,27,150098,S,null
+1999,FURNITURE,Table,Coffee Table,91,154894,null,null
