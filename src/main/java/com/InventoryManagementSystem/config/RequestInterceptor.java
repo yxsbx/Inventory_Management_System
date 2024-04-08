@@ -12,7 +12,7 @@ public class RequestInterceptor implements HandlerInterceptor {
   private final StockProductVerifyService stockProductVerifyService;
   @Override
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-    stockProductVerifyService.applyDiscountToProducts(5, 10);
+    stockProductVerifyService.applyDiscountToProducts(5, 50);
     System.err.println("Estoque Atualizado");
     return true;
   }

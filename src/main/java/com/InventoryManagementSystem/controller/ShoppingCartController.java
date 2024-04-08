@@ -21,9 +21,9 @@ public class ShoppingCartController {
     return ResponseEntity.ok(shoppingCart);
   }
 
-  @GetMapping("/cart/add/{productId}/{Quantity}")
-  public ResponseEntity<Void> addToCart(@PathVariable Integer productId, @PathVariable int Quantity) {
-    shoppingCartService.addToCart(productId, Quantity);
+  @PostMapping("/cart/add")
+  public ResponseEntity<Void> addToCart(@RequestBody ProductDTO productDTO, @RequestParam int stockQuantity) {
+    shoppingCartService.addToCart(productDTO, stockQuantity);
     return ResponseEntity.ok().build();
   }
 

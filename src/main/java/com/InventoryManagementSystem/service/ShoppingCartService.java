@@ -18,8 +18,8 @@ public class ShoppingCartService {
   private final List<Product> shoppingCart = new ArrayList<>();
 
 
-  public synchronized void addToCart(Integer productId, int stockQuantity) {
-    Product item = this.productRepository.findById(productId).orElseThrow(
+  public synchronized void addToCart(ProductDTO product, int stockQuantity) {
+    Product item = productRepository.findById(product.productCode()).orElseThrow(
             () -> new ProductIdNotFoundException("Item not found.")
     );
 
