@@ -20,16 +20,8 @@ This Inventory Management System is a Java-based application designed to manage 
 2. Clone the repository and navigate to the project directory.
 
 ## API Endpoints
-- `GET /product/all`: List all products.
-- `POST /product`: Create a new product.
-- `PUT /product/{id}`: Update a product by ID.
-- `DELETE /product/{id}`: Delete a product by ID.
-- `GET /product/csv`: Import products from a CSV file.
-- `GET /stock/report`: Generate a stock report.
 
 Refer to the included Insomnia export file (`Insomnia_2024-04-08.json`) for more detailed API usage and endpoints.
-
-
 
 # Sistema de Gerenciamento de Inventário (Português)
 
@@ -53,12 +45,6 @@ Este Sistema de Gerenciamento de Inventário é uma aplicação baseada em Java 
 2. Clone o repositório e navegue até o diretório do projeto.
 
 ## Endpoints da API
-- `GET /product/all`: Lista todos os produtos.
-- `POST /product`: Cria um novo produto.
-- `PUT /product/{id}`: Atualiza um produto pelo ID.
-- `DELETE /product/{id}`: Deleta um produto pelo ID.
-- `GET /product/csv`: Importa produtos a partir de um arquivo CSV.
-- `GET /stock/report`: Gera um relatório de estoque.
 
 Consulte o arquivo de exportação do Insomnia incluído (`Insomnia_2024-04-08.json`) para uso detalhado da API e endpoints.
 
@@ -67,4 +53,3 @@ Consulte o arquivo de exportação do Insomnia incluído (`Insomnia_2024-04-08.j
 1. Yasmin Barcelos
 2. Paulo Henrique
 3. Daniel Martins
-
