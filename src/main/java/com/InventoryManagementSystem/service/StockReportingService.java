@@ -1,7 +1,6 @@
 package com.InventoryManagementSystem.service;
 
 import com.InventoryManagementSystem.model.Product;
-import com.InventoryManagementSystem.repository.ProductRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,28 +9,68 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 @Service
 @AllArgsConstructor
 public class StockReportingService {
-  private final ProductRepository productRepository;
+  private final CrudProductService productService;
 
-  public void writeStockReportFile() throws IOException {
-     String reportDestinationPath = "src/data/reports";
+  public void generateStockReport() throws IOException {
+    List<Product> listToGenerateReport = productService.getAllProducts()
+            .stream()
+            .map(Product::new)
+            .toList();
+
+    writeStockReportFile(
+            listToGenerateReport,
+            generatereportFilePath("StockReports")
+    );
+  }
+
+  public void generateProductReportByCategory(String category) throws IOException {
+    List<Product> ProductsByCategory = productService.getProductByCategory(category)
+            .stream()
+            .map(Product::new)
+            .toList();
+
+    writeStockReportFile(
+            ProductsByCategory,
+            generatereportFilePath("ProductsReportsByCategory"+category.trim())
+    );
+  }
+
+  public void generateExpiringProductReport() throws IOException {
+    List<Product> ExpiredProducts = productService.getAllProducts()
+            .stream()
+            .filter(item -> item.expiryDate().isBefore(LocalDate.now()))
+            .toList().stream().map(Product::new).toList();
+
+    writeStockReportFile(
+            ExpiredProducts,
+            generatereportFilePath("ExpiredProductsReports")
+    );
+  }
+
+  private Path generatereportFilePath(String directoryName) throws IOException {
+    String reportDestinationPath = "src/data/reports/" + directoryName;
 
     Path reportsDirectory = Paths.get(reportDestinationPath);
+
     if (!Files.exists(reportsDirectory)) {
       Files.createDirectories(reportsDirectory);
     }
 
     String reportFileName = generateReportFileName();
 
-    Path reportFilePath = reportsDirectory.resolve(reportFileName);
-    
-    List<String> lines = productRepository
-            .findAll()
+    return reportsDirectory.resolve(reportFileName);
+  }
+
+  private void writeStockReportFile(List<Product> listToGenerateReport, Path reportFilePath) throws IOException {
+    List<String> lines =
+            listToGenerateReport
             .stream()
             .map(this::productToString)
             .toList();

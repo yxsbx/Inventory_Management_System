@@ -2,8 +2,6 @@ package com.InventoryManagementSystem.service;
 
 import com.InventoryManagementSystem.dto.ProductDTO;
 import com.InventoryManagementSystem.model.Product;
-import com.InventoryManagementSystem.service.CrudProductService;
-import com.InventoryManagementSystem.service.ShoppingCartService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +15,6 @@ import java.util.List;
 public class StockProductVerifyService {
 
     private final CrudProductService crudProductService;
-    private final ShoppingCartService shoppingCartService;
 
     /**
      * Apply discount to products if current time is within a specific time interval of the day.
@@ -45,14 +42,6 @@ public class StockProductVerifyService {
         }
     }
 
-
-    private List<ProductDTO> getNearExpiryProductsFromShoppingCart(int days) {
-        return shoppingCartService.getShoppingCart()
-                .stream()
-                .filter(item -> item.expiryDate().isBefore(LocalDate.now().plusDays(days)))
-                .toList();
-    }
-
     private List<ProductDTO> getNearExpiryProductsFromCrud(int days) {
         return crudProductService.getAllProducts()
                 .stream()
@@ -60,17 +49,4 @@ public class StockProductVerifyService {
                 .toList();
     }
 
-    private List<ProductDTO> getExpiredProductsFromShoppingCart() {
-        return shoppingCartService.getShoppingCart()
-                .stream()
-                .filter(item -> item.expiryDate().isBefore(LocalDate.now()))
-                .toList();
-    }
-
-    private List<ProductDTO> getExpiredProductsFromCrud() {
-        return crudProductService.getAllProducts()
-                .stream()
-                .filter(item -> item.expiryDate().isBefore(LocalDate.now()))
-                .toList();
-    }
 }

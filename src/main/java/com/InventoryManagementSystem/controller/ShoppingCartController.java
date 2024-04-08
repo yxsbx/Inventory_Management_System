@@ -1,7 +1,6 @@
 package com.InventoryManagementSystem.controller;
 
 import com.InventoryManagementSystem.dto.ProductDTO;
-import com.InventoryManagementSystem.model.Product;
 import com.InventoryManagementSystem.service.ShoppingCartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

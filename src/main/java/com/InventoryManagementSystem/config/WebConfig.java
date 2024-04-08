@@ -1,7 +1,6 @@
 package com.InventoryManagementSystem.config;
 
 import com.InventoryManagementSystem.service.StockProductVerifyService;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

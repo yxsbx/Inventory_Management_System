@@ -29,17 +29,4 @@ public record ProductDTO(
             product.getExpiryDate()
     );
   }
-
-  public ProductDTO setStockQuantity(int stockQuantity) {
-    return new ProductDTO(
-            this.productCode,
-            this.category,
-            this.subcategory,
-            this.name,
-            stockQuantity,
-            this.priceInCents,
-            this.sizeOrLot,
-            this.expiryDate
-    );
-  }
 }
