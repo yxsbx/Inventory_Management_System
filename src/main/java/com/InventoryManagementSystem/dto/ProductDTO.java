@@ -5,6 +5,10 @@ import com.InventoryManagementSystem.model.enums.ProductCategory;
 
 import java.time.LocalDate;
 
+/**
+ * Data transfer object for Product details.
+ */
+
 public record ProductDTO(
         Integer productCode,
         ProductCategory category,
@@ -17,18 +21,24 @@ public record ProductDTO(
         boolean activeDiscount
 ) {
 
+    /**
+     * Constructs a ProductDTO from a Product entity.
+     *
+     * @param product The Product entity.
+     */
 
-  public ProductDTO(Product product) {
-    this(
-            product.getProductCode(),
-            product.getCategory(),
-            product.getSubcategory(),
-            product.getName(),
-            product.getStockQuantity(),
-            product.getPriceInCents(),
-            product.getSizeOrLot(),
-            product.getExpiryDate(),
-            product.getActiveDiscount()
-    );
-  }
+
+    public ProductDTO(Product product) {
+        this(
+                product.getProductCode(),
+                product.getCategory(),
+                product.getSubcategory(),
+                product.getName(),
+                product.getStockQuantity(),
+                product.getPriceInCents(),
+                product.getSizeOrLot(),
+                product.getExpiryDate(),
+                product.getActiveDiscount()
+        );
+    }
 }
